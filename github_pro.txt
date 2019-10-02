@@ -1,4 +1,4 @@
 Github Pro Üyelik için yapılması gerekenler:
-Settings - E-mail : adsoyad@ogrenci.beykoz.edu.tr okul mail adresi eklenmelidir.
+Settings - E-mail : adsoyad@ogrenci.beykoz.edu.tr üniversite e-posta adresi eklenmelidir.
 https://education.github.com adresinden student bağlantısı ile kayıt olunmalıdır.
 
