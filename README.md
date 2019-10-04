@@ -1,2 +1,2 @@
 # DijitalOyunlarKodYazimi1
-2019-2020 Dijital Oyunlar Kod Yazımı I Ders Notları ve Örnekleri
+2019-2020 Dijital Oyunlar için Kod Yazımı I Ders Notları ve Örnekleri
