@@ -7,4 +7,4 @@ Visual Studio 2019 İndirme Linki : https://visualstudio.microsoft.com/tr/downlo
 
 (Community sürümü ücretsizdir.)
 
-Öğrenciler için Azure üyeliği için : https://azure.microsoft.com/tr-tr/free/students/
+Öğrenciler için Azure üyeliği Linki : https://azure.microsoft.com/tr-tr/free/students/
