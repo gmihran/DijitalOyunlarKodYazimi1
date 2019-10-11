@@ -24,7 +24,8 @@ int main()
 	//3.yöntem:
 	cout << "Toplama:" << sayi1 + sayi2 << endl << "Ortalama:" << (sayi1 + sayi2) / 2 << endl;
 
-	//Bir dersin vize, ödev, quiz ve final notlarının girilerek ortalamasını hesaplayınız ve ekrana yazdırınız. Vize notunun katkısı %30, ödev %10, quiz %10, final notunun katkısı %50’dir. 
+	//Bir dersin vize, ödev, quiz ve final notlarının girilerek ortalamasını hesaplayınız ve ekrana yazdırınız. 
+	//Vize notunun katkısı %30, ödev %10, quiz %10, final notunun katkısı %50’dir. 
 	//Ortalama = vize * 30 % +ödev * 10 % +quiz * 10 % +final * 50 %
 
 	
