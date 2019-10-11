@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-	//Örnek-1.	Klavyeden girilen iki sayının toplamını ve ortalamasını ekrana yazdırınız.
+	//Klavyeden girilen iki sayının toplamını ve ortalamasını ekrana yazdırınız.
 
 	setlocale(LC_ALL, "Turkish");
 	
