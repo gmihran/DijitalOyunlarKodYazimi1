@@ -4,28 +4,28 @@
 using namespace std;
 int main()
 {
-	//Örnek-1.	Klavyeden girilen iki sayının toplamını ve ortalamasını ekrana yazdırınız.
+	//Ã–rnek-1.	Klavyeden girilen iki sayÄ±nÄ±n toplamÄ±nÄ± ve ortalamasÄ±nÄ± ekrana yazdÄ±rÄ±nÄ±z.
 
 	setlocale(LC_ALL, "Turkish");
 	
 	int sayi1, sayi2, toplam, ort;
-	cout << "İki sayı giriniz\n";
+	cout << "Ä°ki sayÄ± giriniz\n";
 	cin >> sayi1 >> sayi2;
-	//1.yöntem:
+	//1.yÃ¶ntem:
 	toplam = sayi1 + sayi2;
 	ort = toplam / 2;
 	cout << "Toplama:" << toplam << endl;
 	cout << "Ortalama:" << ort;
 	
-	//2.yöntem:
+	//2.yÃ¶ntem:
 	cout << "Toplama:" << sayi1+sayi2 << endl;
 	cout << "Ortalama:" << (sayi1 + sayi2) / 2;
 	
-	//3.yöntem:
+	//3.yÃ¶ntem:
 	cout << "Toplama:" << sayi1 + sayi2 << endl << "Ortalama:" << (sayi1 + sayi2) / 2 << endl;
 
-	//Bir dersin vize, ödev, quiz ve final notlarının girilerek ortalamasının hesaplayınız ve ekrana yazdırınız. Vize notunun katkısı %30, ödev %10, quiz %10, final notunun katkısı %50’dir. 
-	//Ortalama = vize * 30 % +ödev * 10 % +quiz * 10 % +final * 50 %
+	//Bir dersin vize, Ã¶dev, quiz ve final notlarÄ±nÄ±n girilerek ortalamasÄ±nÄ± hesaplayÄ±nÄ±z ve ekrana yazdÄ±rÄ±nÄ±z. Vize notunun katkÄ±sÄ± %30, Ã¶dev %10, quiz %10, final notunun katkÄ±sÄ± %50â€™dir. 
+	//Ortalama = vize * 30 % +Ã¶dev * 10 % +quiz * 10 % +final * 50 %
 
 	
 	int vize, final, quiz, odev,ortalama;
@@ -35,23 +35,23 @@ int main()
 	cin >> final;
 	cout << "Quiz:";
 	cin >> quiz;
-	cout << "Ödev:";
+	cout << "Ã–dev:";
 	cin >> odev;
 	ortalama = int(vize * 0.3 +final * 0.5 +quiz * 0.1 +odev * 0.1) ;
 	cout << "Ortalama:" << ortalama << endl;
 	
 	
-	//Değişken tanımlama:
+	//DeÄŸiÅŸken tanÄ±mlama:
 	int sayi=10;
 	float ondaliklisayi=10.5;
 	char harf;
 	bool durum;
-	cout << "Tam sayı:";
+	cout << "Tam sayÄ±:";
 	cin >> sayi ;
-	cout << "Sayı:"<< int(sayi) << endl;
-	cout << "Ondalıklı sayı:";
+	cout << "SayÄ±:"<< int(sayi) << endl;
+	cout << "OndalÄ±klÄ± sayÄ±:";
 	cin >> ondaliklisayi;
-	cout <<"Ondalıklı:" <<ondaliklisayi << endl;
+	cout <<"OndalÄ±klÄ±:" <<ondaliklisayi << endl;
 	cout << "Harf:";
 	cin >> harf;
 	cout << "Harf:" << harf << endl;
@@ -60,61 +60,61 @@ int main()
 		durum = true;
 	else
 		durum = false;
-	cout << "Sayı 10'dan büyük mü?:" << durum << endl;
+	cout << "SayÄ± 10'dan bÃ¼yÃ¼k mÃ¼?:" << durum << endl;
 	if (harf == 'A')
 		cout << "A girildi";
 	else
 		cout << "A girilmedi";
 	cout << endl;
-	//Girilen iki sayıdan büyük olan sayıyı ekrana yazdıralım.
+	//Girilen iki sayÄ±dan bÃ¼yÃ¼k olan sayÄ±yÄ± ekrana yazdÄ±ralÄ±m.
 	//int sayi1, sayi2;
-	//sayi1 ve sayi2 daha önceden tanımlandığı için tekrar tanımlamıyoruz.
-	cout << "İki sayı giriniz:";
+	//sayi1 ve sayi2 daha Ã¶nceden tanÄ±mlandÄ±ÄŸÄ± iÃ§in tekrar tanÄ±mlamÄ±yoruz.
+	cout << "Ä°ki sayÄ± giriniz:";
 	cin >> sayi1 >> sayi2;
 	if (sayi1 > sayi2)
-		cout << "Büyük sayı:" << sayi1 << endl;
+		cout << "BÃ¼yÃ¼k sayÄ±:" << sayi1 << endl;
 	else
-		cout << "Büyük sayı:" << sayi2 << endl;
-	//Girilen iki sayıdan hangisinin büyük olduğunu veya eşitse
-	//eşit olduklarını ekrana yazdıralım
-	//1.yöntem
-	//Bu if bloğunda program çalıştığında tüm koşullara tek tek bakılır.
-	//Bu birbirine bağlı koşullarda tercih edilmemelidir.
+		cout << "BÃ¼yÃ¼k sayÄ±:" << sayi2 << endl;
+	//Girilen iki sayÄ±dan hangisinin bÃ¼yÃ¼k olduÄŸunu veya eÅŸitse
+	//eÅŸit olduklarÄ±nÄ± ekrana yazdÄ±ralÄ±m
+	//1.yÃ¶ntem
+	//Bu if bloÄŸunda program Ã§alÄ±ÅŸtÄ±ÄŸÄ±nda tÃ¼m koÅŸullara tek tek bakÄ±lÄ±r.
+	//Bu birbirine baÄŸlÄ± koÅŸullarda tercih edilmemelidir.
 	/*
 	if (sayi1 > sayi2)
-		cout << "1.sayı 2.sayıdan daha büyüktür";
+		cout << "1.sayÄ± 2.sayÄ±dan daha bÃ¼yÃ¼ktÃ¼r";
 	if (sayi1 < sayi2)
-		cout << "2.sayı 1.sayıdan daha büyüktür";
+		cout << "2.sayÄ± 1.sayÄ±dan daha bÃ¼yÃ¼ktÃ¼r";
 	if (sayi1 == sayi2)
-		cout << "Sayılar birbirine eşit";
+		cout << "SayÄ±lar birbirine eÅŸit";
 	cout << endl;
 	*/
-	//2.yöntem:
-	//Birbirine bağlı koşulların olması durumunda bu yapı tercih edilmelidir.
-	//Bu koşul yapısı bir koşulun sağlanması durumunda diğer koşullara bakmaz.
+	//2.yÃ¶ntem:
+	//Birbirine baÄŸlÄ± koÅŸullarÄ±n olmasÄ± durumunda bu yapÄ± tercih edilmelidir.
+	//Bu koÅŸul yapÄ±sÄ± bir koÅŸulun saÄŸlanmasÄ± durumunda diÄŸer koÅŸullara bakmaz.
 	if (sayi1 > sayi2)
-		cout << "1.sayı 2.sayıdan daha büyüktür";
+		cout << "1.sayÄ± 2.sayÄ±dan daha bÃ¼yÃ¼ktÃ¼r";
 	else if (sayi1 < sayi2)
-		cout << "2.sayı 1.sayıdan daha büyüktür";
+		cout << "2.sayÄ± 1.sayÄ±dan daha bÃ¼yÃ¼ktÃ¼r";
 	else
-		cout << "Sayılar birbirine eşit";
+		cout << "SayÄ±lar birbirine eÅŸit";
 	cout << endl;
-	//sayi1 ve sayi2'nin tek veya çift olduğunu ekrana yazdıralım
-	// % karakteri ile bir sayının diğer bir sayıya bölümünden kalan(mod) hesaplanır.
-	//Ör. 5%2 işleminin sonucu 1'dir. 4%2 işleminin sonucu 0'dır.
-	//Bunu bir koşulda ifade etmek için;
-	//Tek için: if(sayi%2==1), Çift için: if (sayi%2==0) koşul blokları kullanılır.
+	//sayi1 ve sayi2'nin tek veya Ã§ift olduÄŸunu ekrana yazdÄ±ralÄ±m
+	// % karakteri ile bir sayÄ±nÄ±n diÄŸer bir sayÄ±ya bÃ¶lÃ¼mÃ¼nden kalan(mod) hesaplanÄ±r.
+	//Ã–r. 5%2 iÅŸleminin sonucu 1'dir. 4%2 iÅŸleminin sonucu 0'dÄ±r.
+	//Bunu bir koÅŸulda ifade etmek iÃ§in;
+	//Tek iÃ§in: if(sayi%2==1), Ã‡ift iÃ§in: if (sayi%2==0) koÅŸul bloklarÄ± kullanÄ±lÄ±r.
 	if (sayi1 % 2 == 0)
 	{
-		//Birden fazla kod satırının çalışması için kodlar {} arasında yazılır.
+		//Birden fazla kod satÄ±rÄ±nÄ±n Ã§alÄ±ÅŸmasÄ± iÃ§in kodlar {} arasÄ±nda yazÄ±lÄ±r.
 		cout << sayi1;
-		cout << " Çifttir\n";
+		cout << " Ã‡ifttir\n";
 	}
 	else
 		cout << sayi1 << " Tektir" << endl;
 
 	if (sayi2 % 2 == 0)
-		cout << sayi2 << " Çifttir\n";
+		cout << sayi2 << " Ã‡ifttir\n";
 	else
 		cout << sayi2 << " Tektir\n";
 
