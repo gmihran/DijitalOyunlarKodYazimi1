@@ -58,7 +58,8 @@ int main() {
   /*
   for (i=0;i>1;i++) 
     //Ölü döngü, hiçbir zaman çalışmaz
-    ////for döngüsü şart doğru ise ve doğru olduğu sürece çalışır, ama bu döngüde hiçbir zaman doğru olamaz.
+    //for döngüsü şart doğru ise ve doğru olduğu sürece çalışır, 
+    //ama bu döngüdeki koşul hiçbir zaman doğru olmayacağı için döngü çalışmaz.
     cout << i;
   for (i=0;i==0;)
     //Sonsuz döngü
