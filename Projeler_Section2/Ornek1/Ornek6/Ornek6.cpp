@@ -78,7 +78,7 @@ int main() {
     if (i%3==0 || i%5==0)
       cout << i << endl; 
   //Klavyeden girilen kelimeyi alt alta 10 kere ekrana yazdırınız.
-  /*
+  
   string kelime;
   cout << "Kelime giriniz:";
   cin >> kelime;
@@ -109,7 +109,7 @@ int main() {
   for (i=1;i<=sayi;i++)
     fakt*=i; //fakt=fakt*i;
   cout << sayi << "!=" << fakt << endl;
-  */
+  
   //Klavyeden girilen 5 adet sayının toplamını ve ortalamasını ekrana yazdırınız.
   int s,t=0;
   //Toplamada etkisiz eleman 0 olduğu için t değişkenine 0 değerini verdik
