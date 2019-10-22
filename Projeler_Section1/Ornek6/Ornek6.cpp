@@ -83,7 +83,7 @@ int main() {
   for (i=1;i<=100;i++)
     if ((i%3==0 || i%5==0) && i%15!=0)
       cout << i << endl;
-  /*
+  
   
   //Klavyeden girilen kelimeyi alt alta 10 kere ekrana yazdırınız.
   string kelime;
@@ -106,7 +106,7 @@ int main() {
   //iki sayı birbirine eşitse else durumu çalışır
     cout << x; //cout << y;
 
-  */
+  
   //Klavyeden girilen sayının faktöriyelini ekrana yazdırınız.
   //5!=1*2*3*4*5=120
   //3!=3*2*1=6
