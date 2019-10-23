@@ -4,8 +4,9 @@ using namespace std;
 int main() {
   setlocale(LC_ALL, "Turkish");
   //Klavyeden girilen 5 adet sayýnýn toplamýný ve ortalamasýný ekrana yazdýrýnýz.
-  int i,sayi,toplam=0;
-  /*
+  int i,sayi;
+  
+  int toplam=0;
   for (i=1;i<=5;i++) //i=i+1 //i+=1 //++i
   {
     cout << i << ".sayý:";
@@ -53,7 +54,7 @@ int main() {
     }
   }
   cout << "Min:" << min << endl << "Mak:" << mak << endl;
-  */
+  
   //0 sayýsý girilene kadar girilen deðerlerin çarpýmýný hesaplatýp ekrana yazdýralým. 0 sayýsý çarpým sonucunu etkilemesin.
   //Bu soruda en mantýklý yapý do while yapýsýdýr. Ama biz for ile çözmeye çalýþýyoruz.
   int carpim=1;
@@ -71,4 +72,54 @@ int main() {
   }
   cout << "Çarpým sonucu:" << carpim << endl;
   
+  //Girilen sayýnýn bölenlerini ve bölenlerinin sayýsýný ekrana yazdýralým
+  int bolensayisi=0;
+  //int sayi,i;
+  cout << "Sayý:";
+  cin >> sayi;
+  for (i=1;i<=sayi;i++)
+    if (sayi%i==0)
+    {
+      //Tam bölündüðünde bu blok çalýþýr
+      cout << i << endl;
+      bolensayisi++;
+    }
+  cout << "Bölen sayýsý:" << bolensayisi << endl;
+  
+  //Girilen sayýlarýn ebob, ekok deðerlerini bulalým
+  int sayi1,sayi2,ebob,ekok;
+  //ebob:
+  //Girilen sayýlardan küçük olan sayýyý bulup o sayýya kadar gitmeliyiz
+  cout << "2 sayý giriniz:";
+  cin >> sayi1 >> sayi2;
+  if (sayi1<sayi2)
+  //yer deðiþtirme algoritmasý ile çözebilirdik
+  {  
+    for (i=1;i<=sayi1;i++)
+      if (sayi1%i==0 && sayi2%i==0)
+        ebob=i;
+  }
+  else
+    for (i=1;i<=sayi2;i++)
+      if (sayi1%i==0 && sayi2%i==0)
+        ebob=i;
+  cout << "Ebob:" << ebob << endl;
+
+  //Ebob - Yer deðiþtirme algoritmasý ile çözümü
+  int bos;
+  if (sayi1>sayi2)
+  {
+    bos=sayi1;
+    sayi1=sayi2;
+    sayi2=bos;
+  }
+  //sayi1 deðerinin içinde küçük olan sayýyý tutmuþ olduk
+  for (i=1;i<=sayi1;i++)
+      if (sayi1%i==0 && sayi2%i==0)
+        ebob=i;
+  cout << "Ebob:" << ebob << endl;
+
+  //Girilen sayýnýn asal olup olmadýðýný bulalým
+
+  //Fonksiyonlar konusu iþlendikten sonra bir sayýnýn asal bölenlerini bulalým.
 }
