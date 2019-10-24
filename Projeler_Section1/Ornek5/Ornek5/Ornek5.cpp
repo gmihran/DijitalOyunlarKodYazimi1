@@ -3,27 +3,27 @@
 #include <locale.h>
 #include <string>
 using namespace std;
-//std isim uzayını projemize dahil ettik
+//std isim uzayÄ±nÄ± projemize dahil ettik
 int main()
 {
 	setlocale(LC_ALL, "Turkish");
-    //Kullanıcıdan haftanın kaçıncı günü bilgisini alalım
-	//Günü ekrana getirelim. (Pazartesi haftanın 1.günü)
-	//Ör. 7 dediğinde Pazar, 3 dediğinde Çarşamba ekrana yazdırılacak
+    	//KullanÄ±cÄ±dan haftanÄ±n kaÃ§Ä±ncÄ± gÃ¼nÃ¼ bilgisini alalÄ±m
+	//GÃ¼nÃ¼ ekrana getirelim. (Pazartesi haftanÄ±n 1.gÃ¼nÃ¼)
+	//Ã–r. 7 dediÄŸinde Pazar, 3 dediÄŸinde Ã‡arÅŸamba ekrana yazdÄ±rÄ±lacak
 	/*
 	int gun;
-	cout << "Haftanın kaçıncı günü:";
+	cout << "HaftanÄ±n kaÃ§Ä±ncÄ± gÃ¼nÃ¼:";
 	cin >> gun;
 	
-	//1. yöntem (Uzun Yol-dizi ve for döngüsü kullanmadan çözüm):
+	//1. yÃ¶ntem (Uzun Yol-dizi ve for dÃ¶ngÃ¼sÃ¼ kullanmadan Ã§Ã¶zÃ¼m):
 	if (gun == 1)
 		cout << "Pazartesi";
 	else if (gun == 2)
-		cout << "Salı";
+		cout << "SalÄ±";
 	else if (gun == 3)
-		cout << "Çarşamba";
+		cout << "Ã‡arÅŸamba";
 	else if (gun == 4)
-		cout << "Perşembe";
+		cout << "PerÅŸembe";
 	else if (gun == 5)
 		cout << "Cuma";
 	else if (gun == 6)
@@ -31,25 +31,25 @@ int main()
 	else if (gun == 7)
 		cout << "Pazar";
 	else
-		cout << "Geçersiz değer girdiniz";
+		cout << "GeÃ§ersiz deÄŸer girdiniz";
 	cout << endl;
 	*/
 
 	/*
-	//2.Yöntem (switch case ile çözüm):
+	//2.YÃ¶ntem (switch case ile Ã§Ã¶zÃ¼m):
 	switch (gun)
 	{
 	case 1:
 		cout << "Pazartesi";
 		break;
 	case 2:
-		cout << "Salı";
+		cout << "SalÄ±";
 		break;
 	case 3:
-		cout << "Çarşamba";
+		cout << "Ã‡arÅŸamba";
 		break;
 	case 4:
-		cout << "Perşembe";
+		cout << "PerÅŸembe";
 		break;
 	case 5:
 		cout << "Cuma";
@@ -61,77 +61,77 @@ int main()
 		cout << "Pazar";
 		break;
 	default:
-		//case durumlarının sağlanmaması durumunda default çalışır.
-		cout << "Geçersiz değer girdiniz";
+		//case durumlarÄ±nÄ±n saÄŸlanmamasÄ± durumunda default Ã§alÄ±ÅŸÄ±r.
+		cout << "GeÃ§ersiz deÄŸer girdiniz";
 		break;
 	}
 	cout << endl;
 	
-	//3. yöntem dizi ile çözümü
-	string gunler[7] = { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi","Pazar" };
-	//7 değer tutabilen string bir dizi tanımladık
+	//3. yÃ¶ntem dizi ile Ã§Ã¶zÃ¼mÃ¼
+	string gunler[7] = { "Pazartesi", "SalÄ±", "Ã‡arÅŸamba", "PerÅŸembe", "Cuma", "Cumartesi","Pazar" };
+	//7 deÄŸer tutabilen string bir dizi tanÄ±mladÄ±k
 	if (gun >= 1 && gun <= 7)
 		cout << gunler[gun - 1];
-		//gunler dizisi 0.indisten başlar. Bu yüzden gun değerinin 1 eksiğini aldık.
-		//Dizi elemanlarına ulaşmak için dizi_adı[indis değeri] şeklinde kullanılır.
+		//gunler dizisi 0.indisten baÅŸlar. Bu yÃ¼zden gun deÄŸerinin 1 eksiÄŸini aldÄ±k.
+		//Dizi elemanlarÄ±na ulaÅŸmak iÃ§in dizi_adÄ±[indis deÄŸeri] ÅŸeklinde kullanÄ±lÄ±r.
 	else
-		cout << "Geçersiz değer girdiniz";
+		cout << "GeÃ§ersiz deÄŸer girdiniz";
 	cout << endl;
-	//Kullanıcının girdiği değere göre gün bilgisini getirelim
-	//Örn. 3 girilirse Çarşamba, 12 girilirse Cuma, 20 girilirse Cumartesi
+	//KullanÄ±cÄ±nÄ±n girdiÄŸi deÄŸere gÃ¶re gÃ¼n bilgisini getirelim
+	//Ã–rn. 3 girilirse Ã‡arÅŸamba, 12 girilirse Cuma, 20 girilirse Cumartesi
 	cout << gunler[(gun % 7)-1];
-	//1 eksiğini almamızın sebebi dizilerin 0. indisten başlamasıdır.
+	//1 eksiÄŸini almamÄ±zÄ±n sebebi dizilerin 0. indisten baÅŸlamasÄ±dÄ±r.
 	
 
-	//Girilen ay bilgisine göre mevsimleri ekrana getiren program
-	//12-1-2 Kış
-	//3-4-5 İlkbahar
+	//Girilen ay bilgisine gÃ¶re mevsimleri ekrana getiren program
+	//12-1-2 KÄ±ÅŸ
+	//3-4-5 Ä°lkbahar
 	//6-7-8 Yaz
 	//9-10-11 Sonbahar
 	
 	int ay;
-	cout << "Ay değerini sayısal olarak giriniz (1-12):";
+	cout << "Ay deÄŸerini sayÄ±sal olarak giriniz (1-12):";
 	cin >> ay;
 	if (ay == 12 || ay == 1 || ay == 2)
-		cout << "Kış";
+		cout << "KÄ±ÅŸ";
 	else if (ay >= 3 && ay <= 5)
 		//else if (ay == 3 || ay == 4 || ay == 5) 
-		//şeklinde de yazılabilir
-		cout << "İlkbahar";
+		//ÅŸeklinde de yazÄ±labilir
+		cout << "Ä°lkbahar";
 	else if (ay >= 6 && ay <= 8)
 		cout << "Yaz";
 	else if (ay >= 9 && ay <= 11)
 		cout << "Sonbahar";
 	else
-		cout << "Hatalı değer girildi";
+		cout << "HatalÄ± deÄŸer girildi";
 	*/
 		
-	//Girilen doğum yılı,ayı ve bulunduğu yıl,ay bilgisine göre yaşı hesaplayan program
-	//Doğum yılı bulunduğu yıldan büyük olamaz!
-	//Doğum yılı bulunduğu yıla eşitse doğum ayı bulunduğu aydan büyük olamaz!
-	//Eğer doğum yılı bulunduğu yıla eşitse aya göre hesaplama yapılacaktır.
-	//Ay sonucu negatif olmamalı.Eğer ay sonucu negatif (-) çıkarsa, yil sonucunu 12 ile çarpıp ay sonucunu bu değerden çıkarıp ay sonucunu bulalım. 
+	//Girilen doÄŸum yÄ±lÄ±,ayÄ± ve bulunduÄŸu yÄ±l,ay bilgisine gÃ¶re yaÅŸÄ± hesaplayan program
+	//DoÄŸum yÄ±lÄ± bulunduÄŸu yÄ±ldan bÃ¼yÃ¼k olamaz!
+	//DoÄŸum yÄ±lÄ± bulunduÄŸu yÄ±la eÅŸitse doÄŸum ayÄ± bulunduÄŸu aydan bÃ¼yÃ¼k olamaz!
+	//EÄŸer doÄŸum yÄ±lÄ± bulunduÄŸu yÄ±la eÅŸitse aya gÃ¶re hesaplama yapÄ±lacaktÄ±r.
+	//Ay sonucu negatif olmamalÄ±.EÄŸer ay sonucu negatif (-) Ã§Ä±karsa, yil sonucunu 12 ile Ã§arpÄ±p ay sonucunu bu deÄŸerden Ã§Ä±karÄ±p ay sonucunu bulalÄ±m. 
 	int d_yil, b_yil, d_ayi, b_ay, yas, ay;
 gityil:
-	cout << "Doğum yılınızı giriniz:";
+	cout << "DoÄŸum yÄ±lÄ±nÄ±zÄ± giriniz:";
 	cin >> d_yil;
-	cout << "Bulunduğunuz yılı giriniz:";
+	cout << "BulunduÄŸunuz yÄ±lÄ± giriniz:";
 	cin >> b_yil;
-	//Eğer doğum yılı bulunduğu yıldan büyükse, doğum yılı ve bulunduğu yıl tekrar istenecek. Bu döngü d_yil b_yil dan küçük olana kadar devam edecek
+	//EÄŸer doÄŸum yÄ±lÄ± bulunduÄŸu yÄ±ldan bÃ¼yÃ¼kse, doÄŸum yÄ±lÄ± ve bulunduÄŸu yÄ±l tekrar istenecek. Bu dÃ¶ngÃ¼ d_yil b_yil dan kÃ¼Ã§Ã¼k olana kadar devam edecek
 	if (d_yil > b_yil)
 	{
-		cout << "Doğum yılı bulunduğu yıldan büyük olamaz." << endl;
+		cout << "DoÄŸum yÄ±lÄ± bulunduÄŸu yÄ±ldan bÃ¼yÃ¼k olamaz." << endl;
 		goto gityil;
 	}
 gitay:
-	cout << "Doğum ayınızı giriniz:";
+	cout << "DoÄŸum ayÄ±nÄ±zÄ± giriniz:";
 	cin >> d_ayi;
-	cout << "Bulunduğunuz ayı giriniz:";
+	cout << "BulunduÄŸunuz ayÄ± giriniz:";
 	cin >> b_ay;
 	
 	if (d_yil == b_yil && d_ayi > b_ay)
 	{
-		cout << "Bulunduğu ay doğum ayından küçük olamaz." << endl;
+		cout << "BulunduÄŸu ay doÄŸum ayÄ±ndan kÃ¼Ã§Ã¼k olamaz." << endl;
 		goto gitay;
 	}
 	yas = b_yil - d_yil;
@@ -141,19 +141,19 @@ gitay:
 		yas = yas - 1; 
 		ay = 12 + ay;
 	}
-	cout << "Yaş:" << yas << " Ay:" << ay << endl;
+	cout << "YaÅŸ:" << yas << " Ay:" << ay << endl;
 	yas = b_yil - d_yil;
 	ay = b_ay - d_ayi;
 	ay = ay + yas * 12;
 	yas = ay / 12;
 	ay = ay % 12;
-	cout << "Yaş:" << yas << " Ay:" << ay << endl;
-	//Ödev:
+	cout << "YaÅŸ:" << yas << " Ay:" << ay << endl;
+	//Ã–dev:
 	//Elma : 1 TL, Armut : 2 TL, Muz : 4 TL, Mandalina : 0.5 TL
-	//10 Elma ve üzeri %10 indirim
-	//5 Armut ve üzeri %5 indirim
-	//20 Muz ve üzeri %30 indirim
-	//100 Mandalina ve üzeri %28 indirim
-	//Elma ve Armut toplamı 15 ise 3 mandalina hediye 
+	//10 Elma ve Ã¼zeri %10 indirim
+	//5 Armut ve Ã¼zeri %5 indirim
+	//20 Muz ve Ã¼zeri %30 indirim
+	//100 Mandalina ve Ã¼zeri %28 indirim
+	//Elma ve Armut toplamÄ± 15 ise 3 mandalina hediye 
 
 } 
