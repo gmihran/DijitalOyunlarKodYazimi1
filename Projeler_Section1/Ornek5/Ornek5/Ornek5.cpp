@@ -10,7 +10,7 @@ int main()
     	//Kullanıcıdan haftanın kaçıncı günü bilgisini alalım
 	//Günü ekrana getirelim. (Pazartesi haftanın 1.günü)
 	//Ör. 7 dediğinde Pazar, 3 dediğinde Çarşamba ekrana yazdırılacak
-	/*
+	
 	int gun;
 	cout << "Haftanın kaçıncı günü:";
 	cin >> gun;
@@ -33,9 +33,9 @@ int main()
 	else
 		cout << "Geçersiz değer girdiniz";
 	cout << endl;
-	*/
+	
 
-	/*
+	
 	//2.Yöntem (switch case ile çözüm):
 	switch (gun)
 	{
@@ -104,7 +104,7 @@ int main()
 		cout << "Sonbahar";
 	else
 		cout << "Hatalı değer girildi";
-	*/
+	
 		
 	//Girilen doğum yılı,ayı ve bulunduğu yıl,ay bilgisine göre yaşı hesaplayan program
 	//Doğum yılı bulunduğu yıldan büyük olamaz!
