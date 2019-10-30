@@ -1,125 +1,502 @@
+#include "pch.h"
 #include <iostream>
 #include <locale.h>
+
 using namespace std;
+
 int main() {
-  setlocale(LC_ALL, "Turkish");
-  //Klavyeden girilen 5 adet say�n�n toplam�n� ve ortalamas�n� ekrana yazd�r�n�z.
-  int i,sayi;
-  
-  int toplam=0;
-  for (i=1;i<=5;i++) //i=i+1 //i+=1 //++i
-  {
-    cout << i << ".say�:";
-    cin >> sayi;
-    toplam=toplam+sayi; //toplam+=sayi;
-    cout << "Toplam:" << toplam << endl;
-  }
-  cout << "Ortalama:" << float(toplam)/5
- << endl;
-  //Veri t�r�n� farkl� bir veri t�r�ne d�n��t�rmek i�in veri_tipi(degisken_adi) yap�s� kullan�l�r.
-  //Bu �rnekte sonucun ondal�kl� (reel)say� olmas� i�in b�l�nen de�eri float veri t�r�ne d�n��t�rd�k. int/int sonucu int de�er ��kar. float veya double/int sonucu float veya double ��kar.
- 
-  //Klavyeden girilen iki de�erin b�l�m�n� bulup ekrana yazd�ral�m
-  float bolunen,sonuc,bolen;
-  //b�l�m sonucunun ondal�kl� say� olmas� i�in bolunen ve sonuc de�erinin mutlaka float/double de�er olmas� gerekiyor.
-  //bolen de�erin ondal�kl� girilebilmesini sa�lamak istiyorsak onu da float/double tan�mlamam�z gerekiyor.
-  //�rn: bolen int olursa; 5 2.5 de�erinin b�l�m sonucunu 2.5 olarak hesaplar. bolen de�erdeki .5 k�s�rat�n� atarak 2 oldu�unu varsayar.
-  cout << "B�l�nen ve b�len de�erler:";
-  cin >> bolunen >> bolen;
-  sonuc=bolunen/bolen;
-  cout << bolunen << "/" << bolen << ":" << sonuc << endl;
-  
-  //Girilen 5 say�dan en b�y�k ve en k���k say�lar� ekrana yazd�ral�m
-  int min,mak;
-  //int sayi,i;
-  for (i=1;i<=5;i++)
-  {
-    cout << "Bir say� girin:";
-    cin >> sayi;
-    if (i==1)
-    //ilk say� girildi�inde bu if blo�u �al���r. �lk girilen say�y� min ve mak de�erlerine e�itledik
-    {
-      min=sayi;
-      mak=sayi;
-    }
-    else
-    {
-      //Girilen say� 2., 3., 4. ve 5. say� ise else blo�u �al���r
-      if (sayi<min)
-      //E�er girilen say� min de�erinden k���k bir de�er ise art�k min de�erim girilen de�er olacak
-        min=sayi;
-      if (sayi>mak)
-      //E�er girilen say� mak de�erinden b�y�k bir de�er ise art�k mak de�erim girilen de�er olacak
-        mak=sayi;
-    }
-  }
-  cout << "Min:" << min << endl << "Mak:" << mak << endl;
-  
-  //0 say�s� girilene kadar girilen de�erlerin �arp�m�n� hesaplat�p ekrana yazd�ral�m. 0 say�s� �arp�m sonucunu etkilemesin.
-  //Bu soruda en mant�kl� yap� do while yap�s�d�r. Ama biz for ile ��zmeye �al���yoruz.
-  int carpim=1;
-  for (;;)
-  //Sonsuz for d�ng�s� tan�mlad�k
-  {
-    cout << "Say�:";
-    cin >> sayi;
-    if (sayi==0)
-    //Girilen say� 0'a e�it oldu�unda d�ng�y� k�rd�k
-      break;
-      //break ifadesi d�ng�y� k�rar
-    carpim*=sayi; //carpim=carpim*sayi;
-    //Buras� girilen say� 0 olmad��� takdirde �al���r. Sonucun 0 ��kmamas� i�in if blo�undan sonra yaz�yoruz
-  }
-  cout << "�arp�m sonucu:" << carpim << endl;
-  
-  //Girilen say�n�n b�lenlerini ve b�lenlerinin say�s�n� ekrana yazd�ral�m
-  int bolensayisi=0;
-  //int sayi,i;
-  cout << "Say�:";
-  cin >> sayi;
-  for (i=1;i<=sayi;i++)
-    if (sayi%i==0)
-    {
-      //Tam b�l�nd���nde bu blok �al���r
-      cout << i << endl;
-      bolensayisi++;
-    }
-  cout << "B�len say�s�:" << bolensayisi << endl;
-  
-  //Girilen say�lar�n ebob, ekok de�erlerini bulal�m
-  int sayi1,sayi2,ebob,ekok;
-  //ebob:
-  //Girilen say�lardan k���k olan say�y� bulup o say�ya kadar gitmeliyiz
-  cout << "2 say� giriniz:";
-  cin >> sayi1 >> sayi2;
-  if (sayi1<sayi2)
-  //yer de�i�tirme algoritmas� ile ��zebilirdik
-  {  
-    for (i=1;i<=sayi1;i++)
-      if (sayi1%i==0 && sayi2%i==0)
-        ebob=i;
-  }
-  else
-    for (i=1;i<=sayi2;i++)
-      if (sayi1%i==0 && sayi2%i==0)
-        ebob=i;
-  cout << "Ebob:" << ebob << endl;
+	setlocale(LC_ALL, "Turkish");
+	//Klavyeden girilen 5 adet sayının toplamını ve ortalamasını ekrana yazdırınız.
+	int i, sayi;
+	
+	int toplam = 0;
+	for (i = 1; i <= 5; i++) //i=i+1 //i+=1 //++i
+	{
+		cout << i << ".sayı:";
+		cin >> sayi;
+		toplam = toplam + sayi; //toplam+=sayi;
+		cout << "Toplam:" << toplam << endl;
+	}
+	cout << "Ortalama:" << float(toplam) / 5
+		<< endl;
+	//Veri türünü farklı bir veri türüne dönüştürmek için veri_tipi(degisken_adi) yapısı kullanılır.
+	//Bu örnekte sonucun ondalıklı (reel)sayı olması için bölünen değeri float veri türüne dönüştürdük. int/int sonucu int değer çıkar. float veya double/int sonucu float veya double çıkar.
 
-  //Ebob - Yer de�i�tirme algoritmas� ile ��z�m�
-  int bos;
-  if (sayi1>sayi2)
-  {
-    bos=sayi1;
-    sayi1=sayi2;
-    sayi2=bos;
-  }
-  //sayi1 de�erinin i�inde k���k olan say�y� tutmu� olduk
-  for (i=1;i<=sayi1;i++)
-      if (sayi1%i==0 && sayi2%i==0)
-        ebob=i;
-  cout << "Ebob:" << ebob << endl;
+	//Klavyeden girilen iki değerin bölümünü bulup ekrana yazdıralım
+	float bolunen, sonuc, bolen;
+	//bölüm sonucunun ondalıklı sayı olması için bolunen ve sonuc değerinin mutlaka float/double değer olması gerekiyor.
+	//bolen değerin ondalıklı girilebilmesini sağlamak istiyorsak onu da float/double tanımlamamız gerekiyor.
+	//Örn: bolen int olursa; 5 2.5 değerinin bölüm sonucunu 2.5 olarak hesaplar. bolen değerdeki .5 küsüratını atarak 2 olduğunu varsayar.
+	cout << "Bölünen ve bölen değerler:";
+	cin >> bolunen >> bolen;
+	sonuc = bolunen / bolen;
+	cout << bolunen << "/" << bolen << ":" << sonuc << endl;
 
-  //Girilen say�n�n asal olup olmad���n� bulal�m
+	//Girilen 5 sayıdan en büyük ve en küçük sayıları ekrana yazdıralım
+	int min, mak;
+	//int sayi,i;
+	for (i = 1; i <= 5; i++)
+	{
+		cout << "Bir sayı girin:";
+		cin >> sayi;
+		if (i == 1)
+			//ilk sayı girildiğinde bu if bloğu çalışır. İlk girilen sayıyı min ve mak değerlerine eşitledik
+		{
+			min = sayi;
+			mak = sayi;
+		}
+		else
+		{
+			//Girilen sayı 2., 3., 4. ve 5. sayı ise else bloğu çalışır
+			if (sayi < min)
+				//Eğer girilen sayı min değerinden küçük bir değer ise artık min değerim girilen değer olacak
+				min = sayi;
+			if (sayi > mak)
+				//Eğer girilen sayı mak değerinden büyük bir değer ise artık mak değerim girilen değer olacak
+				mak = sayi;
+		}
+	}
+	cout << "Min:" << min << endl << "Mak:" << mak << endl;
 
-  //Fonksiyonlar konusu i�lendikten sonra bir say�n�n asal b�lenlerini bulal�m.
+	//0 sayısı girilene kadar girilen değerlerin çarpımını hesaplatıp ekrana yazdıralım. 0 sayısı çarpım sonucunu etkilemesin.
+	//Bu soruda en mantıklı yapı do while yapısıdır. Ama biz for ile çözmeye çalışıyoruz.
+	cout << "0 sayısı girilene kadar girilen sayıların çarpımını hesaplayan program" << endl;
+	int carpim = 1;
+	for (;;)
+		//Sonsuz for döngüsü tanımladık
+	{
+		cout << "Sayı:";
+		cin >> sayi;
+		if (sayi == 0)
+			//Girilen sayı 0'a eşit olduğunda döngüyü kırdık
+			break;
+		//break ifadesi döngüyü kırar
+		carpim *= sayi; //carpim=carpim*sayi;
+		//Burası girilen sayı 0 olmadığı takdirde çalışır. Sonucun 0 çıkmaması için if bloğundan sonra yazıyoruz
+	}
+	cout << "Çarpım sonucu:" << carpim << endl;
+
+	//Girilen sayının bölenlerini ve bölenlerinin sayısını ekrana yazdıralım
+	int bolensayisi = 0;
+	//int sayi,i;
+	cout << "Sayı:";
+	cin >> sayi;
+	for (i = 1; i <= sayi; i++)
+		if (sayi%i == 0)
+		{
+			//Tam bölündüğünde bu blok çalışır
+			cout << i << endl;
+			bolensayisi++;
+		}
+	cout << "Bölen sayısı:" << bolensayisi << endl;
+	
+	//Girilen sayıların ebob, ekok değerlerini bulalım
+	int sayi1, sayi2, ebob, ekok;
+	//ebob:
+	//ebob en küçük sayıdan daha büyük olamaz
+	//Girilen sayılardan küçük olan sayıyı bulup o sayıya kadar gitmeliyiz
+	cout << "2 sayı giriniz:";
+	cin >> sayi1 >> sayi2;
+	if (sayi1 < sayi2)
+		//yer değiştirme algoritması ile çözebilirdik
+	{
+		for (i = sayi1; i >= 1; i--)
+			if (sayi1%i == 0 && sayi2%i == 0) 
+			{
+				ebob = i;
+				break;
+			}
+				
+	}
+	else
+		for (i = sayi2; i >=1 ; i--)
+			if (sayi1%i == 0 && sayi2%i == 0)
+			{
+				ebob = i;
+				break;
+			}
+				
+	cout << "Ebob:" << ebob << endl;
+
+	//Ebob - Yer değiştirme algoritması ile çözümü
+	int bos;
+	if (sayi1 > sayi2)
+	{
+		//İlk girilen sayı daha büyük bir sayı ise sayı1 ve sayı2'nin yerini değiştirdik
+		bos = sayi1;
+		sayi1 = sayi2;
+		sayi2 = bos;
+	}
+	//sayi1 değerinin içinde küçük olan sayıyı tutmuş olduk
+	for (i = sayi1; i >= 1; i--)
+		if (sayi1%i == 0 && sayi2%i == 0)
+		{
+			ebob = i;
+			break;
+		}
+	cout << "Ebob:" << ebob << endl;
+
+	//Ekok: 
+	//İki sayının çarpımının ekok'a bölünmüş halidir.
+	ekok = sayi1 * sayi2 / ebob;
+	cout << "Ekok:" << ekok << endl;
+	
+	//Girilen sayının asal sayı olup olmadığını bulalım
+	//Asal sayı: 1'den ve kendisinden başka böleni olmayan sayılardır
+	//1,0 ve negatif sayılar asal değildir
+	cout << "Bir sayı giriniz:";
+	cin >> sayi;
+	bool asal = true; //ilk olarak sayının asal olduğunu kabul edelim
+	if (sayi <= 1)
+		asal = false;
+	else
+	{
+		for (i = 2; i < sayi; i++)
+			if (sayi%i == 0)
+			{
+				asal = false;
+				break;
+			}		
+	}
+	if (asal)
+		//Eğer asal değeri true değerine eşitse bu blok çalışır
+		cout << "Sayı asaldır";
+	else
+		//Eğer asal değeri false değerine eşitse bu blok çalışır
+		cout << "Sayı asal değildir";
+
+	//Fonksiyonlar konusu işlendikten sonra bir sayının asal bölenlerini bulalım.
+	
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+
+	/*
+	1 2 3 4 5
+	6 7 8 9 10
+	11 12 13 14 15
+	16 17 18 19 20
+
+	*/
+	for (i = 1; i <= 20; i++)
+	{
+		cout << i << " ";
+		if (i % 5 == 0)
+			cout << endl;
+	}
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+	//7 satırda yan yana 5 yıldız 
+	/*
+	*****
+	*****
+	*****
+	*****
+	*****
+	*****
+	*****
+
+	*/
+	int j;
+	cout << "1.örnek:" << endl;
+	for (i = 1; i <= 7; i++)
+	{
+		for (j = 1; j <= 5; j++)
+			cout << "*";
+		cout << endl;
+	}	
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+	//6 satır boyunca her satırda artan yıldızlar 
+	/*
+
+	*
+	**
+	***
+	****
+	*****
+	******
+	*/
+	cout << "2.örnek:" << endl;
+	for (i = 1; i <= 6; i++)
+	{
+		for (j = 1; j <= i; j++)
+			cout << "*";
+		cout << endl;
+	}
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+
+	/*
+	1
+	12
+	123
+	1234
+	12345
+	123456
+	1234567
+	12345678
+
+	*/
+	cout << "3.örnek:" << endl;
+	for (i = 1; i <= 8; i++)
+	{
+		for (j = 1; j <= i; j++)
+			cout << j;
+		cout << endl;
+	}
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+
+	/*
+
+	1
+	22
+	333
+	4444
+	55555
+	666666
+	7777777
+	88888888
+	999999999
+	10101010101010101010
+
+	*/
+	cout << "4.örnek:" << endl;
+	for (i = 1; i <= 10; i++)
+	{
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+
+	/*
+
+	666666
+	55555
+	4444
+	333
+	22
+	1
+
+	*/
+	cout << "5.örnek:" << endl;
+	for (i = 6; i >= 1; i--)
+	{
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+
+	
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+
+	/*
+	1
+	22
+	333
+	4444
+	55555
+	666666
+	666666
+	55555
+	4444
+	333
+	22
+	1
+
+	*/
+	cout << "6.örnek:" << endl;
+	for (i = 1; i <= 6; i++)
+	{
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+	for (i = 6; i >= 1; i--)
+	{
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+
+	/*
+
+	666666
+	55555
+	4444
+	333
+	22
+	1
+	1
+	22
+	333
+	4444
+	55555
+	666666
+	*/
+
+
+	cout << "7.örnek:" << endl;
+	for (i = 6; i >= 1; i--)
+	{
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+	for (i = 1; i <= 6; i++)
+	{
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+	
+
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+	/*
+	1 1
+	2 22
+	3 333
+	4 4444
+	5 55555
+	6 666666
+	*/
+	cout << "8.örnek:" << endl;
+	for (i = 1; i <= 6; i++)
+	{
+		cout << i << " ";
+		for (j = 1; j <= i; j++)
+			cout << i;
+		cout << endl;
+	}
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+	/*
+	1 1
+	2 12
+	3 123
+	4 1234
+	5 12345
+
+	*/
+	cout << "9.örnek:" << endl;
+	for (i = 1; i <= 5; i++)
+	{
+		cout << i << " ";
+		for (j = 1; j <= i; j++)
+			cout << j;
+		cout << endl;
+	}
+
+
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+	//Girilen sayıya kadar bu işlemi geçekleştirecek.
+	//Örneğin 8 girildiğinde aşağıdaki çıktıyı verecek.
+
+	/*
+	12345678
+	1234567
+	123456
+	12345
+	1234
+	123
+	12
+	1
+	*/
+
+	cout << "10.örnek:" << endl;
+	for (i = 8; i >= 1; i--)
+	{
+		for (j = 1; j <= i; j++)
+			cout << j;
+		cout << endl;
+	}
+
+
+	//Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
+	/*
+	1
+	2 3
+	4 5 6
+	7 8 9 10
+	11 12 13 14 15
+	16 17 18 19 20 21
+	*/
+	cout << "11.örnek:" << endl;
+	int sayac=1;
+	for (i = 1; i <= 6; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			cout << sayac++ << " ";
+			//sayac = sayac + 1;
+		}
+		cout << endl;
+	}
+
+
+	//Kullanıcının girdiği değere göre aşağıdaki çıktıyı yazdırmaya çalışalım
+	//Ör: 6 girilirse aşağıdaki gibi 6 satırlık çıktı olacak
+	/*
+	1
+	2 3
+	4 5 6
+	7 8 9 10
+	11 12 13 14 15
+	16 17 18 19 20 21
+	*/
+
+	cout << "12.örnek:" << endl;
+	cout << "Satır sayısı:";
+	cin >> sayi;
+	sayac = 1;
+	for (i = 1; i <= sayi; i++)
+	{
+		for (j = 1; j <= i; j++)
+		{
+			cout << sayac++ << " ";
+			//sayac = sayac + 1;
+		}
+		cout << endl;
+	}
+	//Kullanıcının girdiği değere göre aşağıdaki çıktıyı yazdırmaya çalışalım
+	//Ör: 19 girilirse aşağıdaki gibi çıktı olacak
+	/*
+	1
+	2 3
+	4 5 6
+	7 8 9 10
+	11 12 13 14 15
+	16 17 18 19
+	*/
+
+	cout << "13.örnek:" << endl;
+	cout << "Sayı:";
+	cin >> sayi;
+	sayac = 1;
+	for (i=1;;i++)
+	//sonsuz for döngüsü
+	{
+		for (j = 1; j <= i; j++)
+		{
+			cout << sayac << " ";
+			if (sayac == sayi)
+				break;
+			sayac++;
+		}
+		cout << endl;
+		if (sayac >= sayi)
+			break;
+	}
+
+
+	//Fonksiyonlar konusu işlendikten sonra bir sayının asal bölenlerini fonksiyon tanımlayarak çözeceğiz.
+
+	//Ödev:
+	//Aşağıdaki 2 problemin algoritmasını, akış diyagramını ve kodlarını yazınız.
+	//Problem-1:İki sayı arasındaki asal sayıları ekrana yazdıralım
+	//Problem-2:Bir sayının asal bölenlerini bulalım (İçiçe for ile) 
+
 }
