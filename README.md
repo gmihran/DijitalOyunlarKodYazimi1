@@ -10,3 +10,5 @@ Visual Studio 2019 İndirme Linki : https://visualstudio.microsoft.com/tr/downlo
 Öğrenciler için Azure üyeliği Linki : https://azure.microsoft.com/tr-tr/free/students/
 
 Öğrenciler için Jetbrains Üyeliği Linki : https://www.jetbrains.com/student/
+
+Öğrenciler için Amazon Web Services (AWS) Üyeliği Linki : https://aws.amazon.com/tr/education/awseducate/
