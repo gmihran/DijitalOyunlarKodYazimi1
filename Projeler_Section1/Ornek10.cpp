@@ -6,7 +6,7 @@ int main()
 {
 	setlocale(LC_ALL, "turkish");
 	int i;
-	/*
+	
 	for (i = 1; i <= 10; i++)
 		cout << i << endl;
 	//i=11
@@ -75,7 +75,7 @@ int main()
 	cout << "Pozitiflerin çarpýmý:" << pcarpim << endl;
 	cout << "Negatiflerin çarpýmý:" << ncarpim << endl;
 
-*/
+
 	//Girilen sayýnýn tersten okunuþu kendisine eþit mi?
 	//sayý=1234
 	//ters=0
@@ -89,9 +89,9 @@ int main()
 	//sayi=1
 	//Sayý 10'dan küçükse döngü sona erer
 	//ters*10=4320 + sayi =4321
-	int ters=0,anasayi,sayi;
+	int ters = 0, anasayi;
+	//int sayi;
 	
-	/*
 	cout << "Sayý:";
 	cin >> sayi;
 	anasayi = sayi;
@@ -106,7 +106,7 @@ int main()
 		cout << anasayi << " Polindrom sayýdýr\n";
 	else
 		cout << anasayi << " Polindrom sayý deðildir\n";
-*/
+
 	//Üç basamaklý 2 sayýnýn çarpýmý polindrom sayýlarýn en büyüðü olan iki sayýnýn çarpýmlarýný bulalým
 	int j, carpim, mak = 0;
 	for (i = 999; i >= 900; i--)
