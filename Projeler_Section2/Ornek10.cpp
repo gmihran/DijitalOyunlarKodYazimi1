@@ -8,83 +8,83 @@ int main()
 	setlocale(LC_ALL, "turkish");
 	int A = 10, B = 5, C = 5, D = -10, i;
 	cout << (A >= B + C) << endl;
-	//while döngüsü
+	//while dÃ¶ngÃ¼sÃ¼
 	for (i = 1; i <= 10; i++)
 		cout << i << endl;
 	//i=11;
-	cout << "While döngüsü baþladý" << endl;
+	cout << "While dÃ¶ngÃ¼sÃ¼ baÅŸladÄ±" << endl;
 	i = 1;
 	while (i <= 10)
-		//þart doðru olduðu sürece çalýþýr
+		//ÅŸart doÄŸru olduÄŸu sÃ¼rece Ã§alÄ±ÅŸÄ±r
 		cout << i++ << endl;
-	//Kullanýcý 0 (sýfýr) girene kadar kullanýcýdan deðer isteyelim
-	//Girdiði deðerlerin toplamlarýný ekrana yazdýralým
+	//KullanÄ±cÄ± 0 (sÄ±fÄ±r) girene kadar kullanÄ±cÄ±dan deÄŸer isteyelim
+	//GirdiÄŸi deÄŸerlerin toplamlarÄ±nÄ± ekrana yazdÄ±ralÄ±m
 	int sayi,toplam=0;
-	/*
+	
 	do
 	{
-		//En az 1 kez çalýþýr
-		cout << "Sayý:";
+		//En az 1 kez Ã§alÄ±ÅŸÄ±r
+		cout << "SayÄ±:";
 		cin >> sayi;
 		toplam += sayi;
-		//þart doðru olduðu sürece çalýþýr
+		//ÅŸart doÄŸru olduÄŸu sÃ¼rece Ã§alÄ±ÅŸÄ±r
 	} while (sayi!=0);
 	cout << "Toplam:" << toplam << endl;
-*/
 
-	//Kullanýcý 0 (sýfýr) girene kadar kullanýcýdan deðer isteyelim
-	//Girdiði deðerlerden çiftlerin toplamlarýný ve teklerin toplamlarýný ekrana yazdýralým
+
+	//KullanÄ±cÄ± 0 (sÄ±fÄ±r) girene kadar kullanÄ±cÄ±dan deÄŸer isteyelim
+	//GirdiÄŸi deÄŸerlerden Ã§iftlerin toplamlarÄ±nÄ± ve teklerin toplamlarÄ±nÄ± ekrana yazdÄ±ralÄ±m
 	int ttoplam = 0, ctoplam=0;
-	/*
+	
 	do
 	{
-		cout << "Sayý:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		if (sayi % 2 == 0)
 			ctoplam += sayi;
 		else
 			ttoplam += sayi;
 	} while (sayi != 0);
-	cout << "Çiftlerin Toplamý:" << ctoplam << endl;
-	cout << "Teklerin Toplamý:" << ttoplam << endl;
-*/
-	//Kullanýcý 0 (sýfýr) girene kadar kullanýcýdan deðer isteyelim
-	//Girdiði deðerlerden negatiflerin toplamlarýný ve pozitiflerin toplamlarýný ekrana yazdýralým
+	cout << "Ã‡iftlerin ToplamÄ±:" << ctoplam << endl;
+	cout << "Teklerin ToplamÄ±:" << ttoplam << endl;
+
+	//KullanÄ±cÄ± 0 (sÄ±fÄ±r) girene kadar kullanÄ±cÄ±dan deÄŸer isteyelim
+	//GirdiÄŸi deÄŸerlerden negatiflerin toplamlarÄ±nÄ± ve pozitiflerin toplamlarÄ±nÄ± ekrana yazdÄ±ralÄ±m
 	int ptoplam = 0, ntoplam = 0;
-	/*
+	
 	do
 	{
-		cout << "Sayý:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		if (sayi > 0)
 			ptoplam += sayi;
 		else
 			ntoplam += sayi;
 	} while (sayi != 0);
-	cout << "Pozitiflerin Toplamý:" << ptoplam << endl;
-	cout << "Negatiflerin Toplamý:" << ntoplam << endl;
-	*/
+	cout << "Pozitiflerin ToplamÄ±:" << ptoplam << endl;
+	cout << "Negatiflerin ToplamÄ±:" << ntoplam << endl;
+	
 
-	//Girdiði deðerlerden negatiflerin çarpýmlarýný ve pozitiflerin çarpýmlarýný ekrana yazdýralým
+	//GirdiÄŸi deÄŸerlerden negatiflerin Ã§arpÄ±mlarÄ±nÄ± ve pozitiflerin Ã§arpÄ±mlarÄ±nÄ± ekrana yazdÄ±ralÄ±m
 	int ncarpim=1, pcarpim = 1;
-	/*
+	
 	do
 	{
-		cout << "Sayý:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		if (sayi < 0)
 			ncarpim *= sayi;
 		else if (sayi > 0)
 			pcarpim *= sayi;
 	} while (sayi!=0);
-	cout << "Pozitiflerin çarpýmý:" << pcarpim << endl;
-	cout << "Negatiflerin çarpýmý:" << ncarpim << endl;
-*/
-	//Girilen sayýnýn tersten okunuþu kendisine eþit mi?
+	cout << "Pozitiflerin Ã§arpÄ±mÄ±:" << pcarpim << endl;
+	cout << "Negatiflerin Ã§arpÄ±mÄ±:" << ncarpim << endl;
+
+	//Girilen sayÄ±nÄ±n tersten okunuÅŸu kendisine eÅŸit mi?
 	//int sayi;
 	int keysayi;
 	int terssayi=0;
-	cout << "Sayý:";
+	cout << "SayÄ±:";
 	cin >> keysayi;
 	sayi = keysayi;
 	do
@@ -95,14 +95,14 @@ int main()
 		
 	} while (sayi >= 10);
 	terssayi = terssayi * 10 + sayi;
-	cout << "Sayýnýn tersi:" << terssayi << endl;
+	cout << "SayÄ±nÄ±n tersi:" << terssayi << endl;
 	if (keysayi == terssayi)
-		cout << keysayi << " polindrom sayýdýr" << endl;
+		cout << keysayi << " polindrom sayÄ±dÄ±r" << endl;
 	else
-		cout << keysayi << " polindrom sayý deðildir" << endl;
+		cout << keysayi << " polindrom sayÄ± deÄŸildir" << endl;
 	
 		
-	//Üç basamaklý 2 sayýnýn çarpýmý polindrom olan en büyük iki sayýnýn çarpýmlarý bulalým
+	//ÃœÃ§ basamaklÄ± 2 sayÄ±nÄ±n Ã§arpÄ±mÄ± polindrom olan en bÃ¼yÃ¼k iki sayÄ±nÄ±n Ã§arpÄ±mlarÄ± bulalÄ±m
 	//int sayi,i;
 	int j, mak=0,s1,s2;
 	bool kontrol = false;
@@ -129,8 +129,8 @@ int main()
 				
 		}
 	}
-	cout << "Sayýlar:" << s1 << " " << s2 << endl;
-	cout << "Çarpýmlarý:" << mak << endl;
+	cout << "SayÄ±lar:" << s1 << " " << s2 << endl;
+	cout << "Ã‡arpÄ±mlarÄ±:" << mak << endl;
 	
 
 
