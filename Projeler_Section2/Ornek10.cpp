@@ -102,7 +102,7 @@ int main()
 		cout << keysayi << " polindrom sayı değildir" << endl;
 	
 		
-	//Üç basamaklı 2 sayının çarpımı polindrom olan en büyük iki sayının çarpımları bulalım
+	//Üç basamaklı 2 sayının çarpımı polindrom sayıların en büyüğü olan iki sayının çarpımlarını bulalım
 	//int sayi,i;
 	int j, mak=0,s1,s2;
 	bool kontrol = false;
