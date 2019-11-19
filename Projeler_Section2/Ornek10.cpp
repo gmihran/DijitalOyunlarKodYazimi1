@@ -104,11 +104,11 @@ int main()
 		
 	//Üç basamaklı 2 sayının çarpımı polindrom olan en büyük iki sayının çarpımları bulalım
 	//int sayi,i;
-	int j;
+	int j, mak=0,s1,s2;
 	bool kontrol = false;
-	for (i = 999; i >= 101; i--)
+	for (i = 999; i >= 900; i--)
 	{
-		for (j = 999; i >= 101; i--)
+		for (j = 999; j >= 900; j--)
 		{
 			terssayi = 0;
 			keysayi = i * j;
@@ -118,19 +118,20 @@ int main()
 				terssayi = sayi % 10 + terssayi * 10;
 				sayi = sayi / 10;
 				//cout << terssayi << endl << sayi << endl;
-
 			} while (sayi >= 10);
 			terssayi = terssayi * 10 + sayi;
-			if (keysayi == terssayi)
+			if (keysayi == terssayi && mak < terssayi)
 			{
-				kontrol = true;
-				break;
+				mak = terssayi;
+				s1 = i;
+				s2 = j;
 			}
+				
 		}
-		if (kontrol)
-			break;
 	}
-	cout << keysayi << endl;
+	cout << "Sayılar:" << s1 << " " << s2 << endl;
+	cout << "Çarpımları:" << mak << endl;
+	
 
 
 }
