@@ -86,7 +86,30 @@ int main()
 	}
 
 	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydını kullanıcıdan alıp ekrana yazdıran programı yazınız.
-	
+	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydını kullanıcıdan alıp ekrana yazdıran programı yazınız.
+	string p[4][3], bilgi[3] = {"Ad","Soyad","Departman"};
+	int i, j;
+	cout << "Personel bilgileriniz giriniz\n";
+	for (i = 0; i < 4; i++){ //Personel
+		//cout << "Personel bilgileriniz giriniz: Ad | Soyad | Departman:";
+		for (j = 0; j < 3; j++){ //Alan
+			cout << bilgi[j] << ":";
+			cin >> p[i][j];
+		}
+	}
+	for (i = 0; i < 4; i++){ //Personel
+		cout << i + 1 << ".Personel:\n";
+		for (j = 0; j < 3; j++){ //Alan
+			cout << bilgi[j] << ":" << p[i][j] << endl;
+		}
+		cout << endl;
+	}
+
 	//Dizinin içerisine ilk değer ataması yapalım:
+	int sayilar2[5] = { 1,2,3,4,5 };
+	string iller[4] = { "İstanbul","Kocaeli","Mersin","İzmir" };
+	int matris12[3][2] = { {5,4}, {2,5}, {5,7} };
+	int matris13[3][2] = { 5,4,2,5,5,7 };
+	
 }
 
