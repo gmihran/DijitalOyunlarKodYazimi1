@@ -20,9 +20,7 @@ int main()
 	}
 	cout << "En küçük değer:" << min << endl;
 	
-
 	//matris dizisinin içindeki en küçük 2. elemanı bulunuz.
-
 	//matris içerisine 20 ile 670 arasında rastgele değerler atayıp bu değerleri ekrana yazdırıyoruz
 	for (satir = 0; satir < 4; satir++)
 		for (sutun = 0; sutun < 4; sutun++){
@@ -59,9 +57,8 @@ int main()
 	
 	//4*4'lük matriste yer alan satırlardaki ve sütunlardaki değerlerden en büyük ve en küçük değerleri ekrana yazdıralım
 	int buyuk_satir[4], kucuk_satir[4], buyuk_sutun[4], kucuk_sutun[4];
-	//Satırlar için ilk değer ataması
 	cout << "İlk değer ataması yapılıyor..\n";
-
+	//Satırlar için ilk değer ataması
 	cout << "Satırdaki ilk değer ataması yapılıyor.." << endl << endl;
 	for (satir = 0; satir < 4; satir++)
 	{
