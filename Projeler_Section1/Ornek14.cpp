@@ -86,7 +86,6 @@ int main()
 	}
 
 	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydını kullanıcıdan alıp ekrana yazdıran programı yazınız.
-	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydını kullanıcıdan alıp ekrana yazdıran programı yazınız.
 	string p[4][3], bilgi[3] = {"Ad","Soyad","Departman"};
 	int i, j;
 	cout << "Personel bilgileriniz giriniz\n";
