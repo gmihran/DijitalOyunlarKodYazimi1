@@ -11,18 +11,18 @@ int main()
 	sayilar[0][0] = 10;
 	sayilar[0][1] = 8;
 	cout << sayilar[0][0] << endl << sayilar[0][1] << endl;
-	//cout << "Sayı:";
-	//cin >> sayilar[0][2];
-	//cout << sayilar[0][2] << endl;
+	cout << "SayÄ±:";
+	cin >> sayilar[0][2];
+	cout << sayilar[0][2] << endl;
 
-	//İki matrisin toplamını hesaplayan programı yazınız.
-	//Matrisler 5*2 boyutunda ve içerisinde 1 ile 100 arasında rastgele sayı tutmalarını sağlayalım.
+	//Ä°ki matrisin toplamÄ±nÄ± hesaplayan programÄ± yazÄ±nÄ±z.
+	//Matrisler 5*2 boyutunda ve iÃ§erisinde 1 ile 100 arasÄ±nda rastgele sayÄ± tutmalarÄ±nÄ± saÄŸlayalÄ±m.
 	srand(time(NULL));
 	int matris1[5][2], matris2[5][2], i, j;
 	cout << "1. matris:\n";
-	for (i = 0; i <= 4; i++) //satırlar
+	for (i = 0; i <= 4; i++) //satÄ±rlar
 	{
-		for (j = 0; j <= 1; j++) //sütunlar
+		for (j = 0; j <= 1; j++) //sÃ¼tunlar
 		{
 			matris1[i][j] = rand() % 100 + 1;
 			cout << i << "," << j << ":" << matris1[i][j] << "\t";
@@ -30,20 +30,20 @@ int main()
 		cout << endl;
 	}
 	cout << "2.matris:\n";
-	for (i = 0; i <= 4; i++) //satırlar
+	for (i = 0; i <= 4; i++) //satÄ±rlar
 	{
-		for (j = 0; j <= 1; j++) //sütunlar
+		for (j = 0; j <= 1; j++) //sÃ¼tunlar
 		{
 			matris2[i][j] = rand() % 100 + 1;
 			cout << i << "," << j << ":" << matris2[i][j] << "\t";
 		}
 		cout << endl;
 	}
-	//matris1 ve matris2 Toplamları
-	cout << "İki matrisin toplamı\n";
-	for (i = 0; i <= 4; i++) //satırlar
+	//matris1 ve matris2 ToplamlarÄ±
+	cout << "Ä°ki matrisin toplamÄ±\n";
+	for (i = 0; i <= 4; i++) //satÄ±rlar
 	{
-		for (j = 0; j <= 1; j++) //sütunlar
+		for (j = 0; j <= 1; j++) //sÃ¼tunlar
 		{
 			cout << matris1[i][j]+matris2[i][j] << " ";
 		}
@@ -51,14 +51,14 @@ int main()
 	}
 
 
-	//10*5 boyutlu matris içerisine 20 ile 50 arasında rastgele değerler atayalım ve kullanıcının girdiği sayıyla bu matrisi çarpalım
-	//Matris 2,3 olsaydı ve kullanıcı 2 girseydi;
-//Çıktı:
+	//10*5 boyutlu matris iÃ§erisine 20 ile 50 arasÄ±nda rastgele deÄŸerler atayalÄ±m ve kullanÄ±cÄ±nÄ±n girdiÄŸi sayÄ±yla bu matrisi Ã§arpalÄ±m
+	//Matris 2,3 olsaydÄ± ve kullanÄ±cÄ± 2 girseydi;
+//Ã‡Ä±ktÄ±:
 /*
 	10*5 Boyutlu Matris:
 	20 22 24
 	21 24 25
-	10*5 Boyutlu Matrisin 2 katı:
+	10*5 Boyutlu Matrisin 2 katÄ±:
 	40 44 48
 	42 48 50
 */
@@ -73,9 +73,9 @@ int main()
 		}
 		cout << endl;
 	}
-	cout << "Sayı:";
+	cout << "SayÄ±:";
 	cin >> sayi;
-	cout << "10 * 5 Boyutlu Matrisin " << sayi <<  " katı:\n";
+	cout << "10 * 5 Boyutlu Matrisin " << sayi <<  " katÄ±:\n";
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 5; j++)
@@ -85,8 +85,8 @@ int main()
 		cout << endl;
 	}
 
-	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydını kullanıcıdan alıp ekrana yazdıran programı yazınız.
+	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydÄ±nÄ± kullanÄ±cÄ±dan alÄ±p ekrana yazdÄ±ran programÄ± yazÄ±nÄ±z.
 	
-	//Dizinin içerisine ilk değer ataması yapalım:
+	//Dizinin iÃ§erisine ilk deÄŸer atamasÄ± yapalÄ±m:
 }
 
