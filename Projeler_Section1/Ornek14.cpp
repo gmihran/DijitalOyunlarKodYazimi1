@@ -3,6 +3,7 @@
 #include <locale.h>
 #include <random>
 #include <time.h>
+#include <string>
 using namespace std;
 int main()
 {
@@ -45,7 +46,7 @@ int main()
 	{
 		for (j = 0; j <= 1; j++) //sütunlar
 		{
-			cout << matris1[i][j]+matris2[i][j] << " ";
+			cout << matris1[i][j] + matris2[i][j] << " ";
 		}
 		cout << endl;
 	}
@@ -75,7 +76,7 @@ int main()
 	}
 	cout << "Sayı:";
 	cin >> sayi;
-	cout << "10 * 5 Boyutlu Matrisin " << sayi <<  " katı:\n";
+	cout << "10 * 5 Boyutlu Matrisin " << sayi << " katı:\n";
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 5; j++)
@@ -86,19 +87,20 @@ int main()
 	}
 
 	//Personel ad, soyad, departman bilgilerini tutan ve 4 personelin kaydını kullanıcıdan alıp ekrana yazdıran programı yazınız.
-	string p[4][3], bilgi[3] = {"Ad","Soyad","Departman"};
-	int i, j;
+	string p[4][3], bilgi[3] = { "Ad","Soyad","Departman" };
+	//int i, j;
 	cout << "Personel bilgileriniz giriniz\n";
-	for (i = 0; i < 4; i++){ //Personel
+	for (i = 0; i < 4; i++) { //Personel
 		//cout << "Personel bilgileriniz giriniz: Ad | Soyad | Departman:";
-		for (j = 0; j < 3; j++){ //Alan
+		for (j = 0; j < 3; j++) { //Alan
 			cout << bilgi[j] << ":";
 			cin >> p[i][j];
 		}
 	}
-	for (i = 0; i < 4; i++){ //Personel
+	cout <<"Personel bilgileri yazdırılıyor.." << endl;
+	for (i = 0; i < 4; i++) { //Personel
 		cout << i + 1 << ".Personel:\n";
-		for (j = 0; j < 3; j++){ //Alan
+		for (j = 0; j < 3; j++) { //Alan
 			cout << bilgi[j] << ":" << p[i][j] << endl;
 		}
 		cout << endl;
@@ -109,6 +111,5 @@ int main()
 	string iller[4] = { "İstanbul","Kocaeli","Mersin","İzmir" };
 	int matris12[3][2] = { {5,4}, {2,5}, {5,7} };
 	int matris13[3][2] = { 5,4,2,5,5,7 };
-	
-}
 
+}
