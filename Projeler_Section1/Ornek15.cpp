@@ -8,9 +8,9 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "turkish");
-	srand(time(NULL)); //random fonksiyonunun farklı değerler üretmesini sağladık
+	srand(time(NULL)); //random fonksiyonunun farklÄ± deÄŸerler Ã¼retmesini saÄŸladÄ±k
 	int matris[4][4] = { 56,23,678,231,234,21,78,26,654,33,32,67,189,35,56,21 }, min, satir , sutun;
-	//matris dizisinin içindeki en küçük elemanı bulunuz.
+	//matris dizisinin iÃ§indeki en kÃ¼Ã§Ã¼k elemanÄ± bulunuz.
 	min = matris[0][0];
 	for (satir = 0; satir < 4; satir++){
 		for (sutun = 0; sutun < 4; sutun++){
@@ -18,22 +18,22 @@ int main()
 				min = matris[satir][sutun];
 		}
 	}
-	cout << "En küçük değer:" << min << endl;
+	cout << "En kÃ¼Ã§Ã¼k deÄŸer:" << min << endl;
 	
 
-	//matris dizisinin içindeki en küçük 2. elemanı bulunuz.
+	//matris dizisinin iÃ§indeki en kÃ¼Ã§Ã¼k 2. elemanÄ± bulunuz.
 
-	//matris içerisine 20 ile 670 arasında rastgele değerler atayıp bu değerleri ekrana yazdırıyoruz
+	//matris iÃ§erisine 20 ile 670 arasÄ±nda rastgele deÄŸerler atayÄ±p bu deÄŸerleri ekrana yazdÄ±rÄ±yoruz
 	for (satir = 0; satir < 4; satir++)
 		for (sutun = 0; sutun < 4; sutun++){
 			matris[satir][sutun] = rand() % 660 + 20;
-			//20 ile 679 arasında değerleri arasında olacak. Son değer: 660+20-1=679
+			//20 ile 679 arasÄ±nda deÄŸerleri arasÄ±nda olacak. Son deÄŸer: 660+20-1=679
 			cout << matris[satir][sutun] << "\t";
 			if (sutun == 3)
 				cout << endl;
 		}
 	int min1, min2;
-	//min1 en küçük değeri, min2 2.en küçük değeri tutuyor
+	//min1 en kÃ¼Ã§Ã¼k deÄŸeri, min2 2.en kÃ¼Ã§Ã¼k deÄŸeri tutuyor
 	min1 = matris[0][0];
 	min2 = matris[0][1];
 	for (satir = 0; satir < 4; satir++) {
@@ -41,35 +41,36 @@ int main()
 			if (matris[satir][sutun] < min1)
 			{
 				min2 = min1; 
-				//min1 eski değeri min2'nin yeni tuttuğu değer olacak
+				//min1 eski deÄŸeri min2'nin yeni tuttuÄŸu deÄŸer olacak
 				min1 = matris[satir][sutun];
 			}
 			else if (matris[satir][sutun] < min2 && matris[satir][sutun]!=min1)
-			//&& matris[satir][sutun]!=min1 bu ifade min1 ve min2 değerlerinin farklı değer tutmasını sağladı. Ör. matris içerisinde en küçük değerden  birden fazla varsa min2 değeri o değere eşit olmayacak
+			//&& matris[satir][sutun]!=min1 bu ifade min1 ve min2 deÄŸerlerinin farklÄ± deÄŸer tutmasÄ±nÄ± saÄŸladÄ±. 
+			//Ã–r. matris iÃ§erisinde en kÃ¼Ã§Ã¼k deÄŸerden  birden fazla varsa min2 deÄŸeri o deÄŸere eÅŸit olmayacak
 			{
 				min2 = matris[satir][sutun];
 			}
 			
 		}
 	}
-	cout << "En küçük 1. değer:" << min1 << endl;
-	cout << "En küçük 2. değer:" << min2 << endl;
+	cout << "En kÃ¼Ã§Ã¼k 1. deÄŸer:" << min1 << endl;
+	cout << "En kÃ¼Ã§Ã¼k 2. deÄŸer:" << min2 << endl;
 	
 	
-	//4*4'lük matriste yer alan satırlardaki ve sütunlardaki değerlerden en büyük ve en küçük değerleri ekrana yazdıralım
+	//4*4'lÃ¼k matriste yer alan satÄ±rlardaki ve sÃ¼tunlardaki deÄŸerlerden en bÃ¼yÃ¼k ve en kÃ¼Ã§Ã¼k deÄŸerleri ekrana yazdÄ±ralÄ±m
 	int buyuk_satir[4], kucuk_satir[4], buyuk_sutun[4], kucuk_sutun[4];
-	//Satırlar için ilk değer ataması
-	cout << "İlk değer ataması yapılıyor..\n";
+	//SatÄ±rlar iÃ§in ilk deÄŸer atamasÄ±
+	cout << "Ä°lk deÄŸer atamasÄ± yapÄ±lÄ±yor..\n";
 
-	cout << "Satırdaki ilk değer ataması yapılıyor.." << endl << endl;
+	cout << "SatÄ±rdaki ilk deÄŸer atamasÄ± yapÄ±lÄ±yor.." << endl << endl;
 	for (satir = 0; satir < 4; satir++)
 	{
 		buyuk_satir[satir] = matris[satir][0];
 		kucuk_satir[satir] = matris[satir][0];
 		cout << buyuk_satir[satir] << "\t" << kucuk_satir[satir] << endl;
 	}
-	//Sütunlar için ilk değer ataması
-	cout << "Sütundaki ilk değer ataması yapılıyor.." << endl << endl;
+	//SÃ¼tunlar iÃ§in ilk deÄŸer atamasÄ±
+	cout << "SÃ¼tundaki ilk deÄŸer atamasÄ± yapÄ±lÄ±yor.." << endl << endl;
 	for (sutun = 0; sutun < 4; sutun++)
 	{
 		buyuk_sutun[sutun] = matris[0][sutun];
@@ -77,7 +78,7 @@ int main()
 		cout << buyuk_sutun[sutun] << "\t" << kucuk_sutun[sutun] << endl;
 
 	}
-	//Karşılaştırma işlemi burada yapılacak...
+	//KarÅŸÄ±laÅŸtÄ±rma iÅŸlemi burada yapÄ±lacak...
 	for (satir = 0; satir < 4; satir++)
 	{
 		for (sutun = 0; sutun < 4; sutun++)
@@ -85,6 +86,6 @@ int main()
 			
 		}
 	}
-	//Bir sonraki derste bu soruya devam edeceğiz..
+	//Bir sonraki derste bu soruya devam edeceÄŸiz..
 
 } 
