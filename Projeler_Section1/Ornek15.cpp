@@ -75,14 +75,30 @@ int main()
 		cout << buyuk_sutun[sutun] << "\t" << kucuk_sutun[sutun] << endl;
 
 	}
+	//int maksimum = INT_MIN;
+	//int minimum = INT_MAX;
+	cout << "INT_MAX:" << INT_MAX << " INT_MIN:" << INT_MIN << endl;
 	//Karşılaştırma işlemi burada yapılacak...
-	for (satir = 0; satir < 4; satir++)
+	int disari, iceri;
+	for (disari = 0; disari < 4; disari++)
 	{
-		for (sutun = 0; sutun < 4; sutun++)
+		for (iceri = 0; iceri < 4; iceri++)
 		{
-			
+			if (buyuk_sutun[disari] < matris[iceri][disari])
+				buyuk_sutun[disari] = matris[iceri][disari];
+
+			if (kucuk_sutun[disari] > matris[iceri][disari])
+				kucuk_sutun[disari] = matris[iceri][disari];
+
+			if (buyuk_satir[disari] < matris[disari][iceri])
+				buyuk_satir[disari] = matris[disari][iceri];
+
+			if (kucuk_satir[disari] > matris[disari][iceri])
+				kucuk_satir[disari] = matris[disari][iceri];
 		}
 	}
-	//Bir sonraki derste bu soruya devam edeceğiz..
+
+
+	//Matrisin en büyük elemanının bulunduğu sütunda yer alan en küçük elemanı bulalım
 
 } 
