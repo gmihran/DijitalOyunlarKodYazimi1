@@ -97,8 +97,53 @@ int main()
 				kucuk_satir[disari] = matris[disari][iceri];
 		}
 	}
-
+	int i;
+	for (i = 0; i < 4; i++)
+	{
+		cout << i + 1 << ".satırdaki en küçük:" << kucuk_satir[i] << endl;
+		cout << i + 1 << ".sütundaki en küçük:" << kucuk_sutun[i] << endl;
+		cout << i + 1 << ".satırdaki en büyük:" << buyuk_satir[i] << endl;
+		cout << i + 1 << ".sütundaki en büyük:" << buyuk_sutun[i] << endl;
+	}
 
 	//Matrisin en büyük elemanının bulunduğu sütunda yer alan en küçük elemanı bulalım
+	int j,maks;
+	int mak = INT_MIN;
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			if (mak < matris[i][j])
+			{
+				mak = matris[i][j]; //Matrisin en büyük değeri
+				maks = j; //En büyük değerimizin sütun indisi
+			}
+				
+		}
+	}
+	cout << "Matristeki en büyük değer:" << mak << endl;
+	cout << "Maksimum değerin sütun indisi:" << maks << endl;
+	min = mak;
+	//min=INT_MAK;
+	for (i = 0; i < 4; i++)
+	{
+		if (matris[i][maks] < min)
+			min = matris[i][maks];
+	}
+	cout << "Matrisin en büyük değerinin olduğu sütundaki en küçük değer:" << min << endl;
 
+	//Yukarıdaki matrisi tek boyutlu diziye atayalım.
+	int dizi[16], sayac = 0;
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			//Satırlar arasında gezinerek atama yapıyoruz. Yani Z çiziyoruz.
+			dizi[sayac] = matris[i][j];
+			sayac++;
+		}
+	}
+	for (i = 0; i < 16; i++)
+		cout << dizi[i] << " ";
+	cout << endl;
 } 
