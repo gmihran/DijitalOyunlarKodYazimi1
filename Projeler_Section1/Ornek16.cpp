@@ -21,7 +21,7 @@ int main(){
 	string k;
 	int s1, s2;
 	yazdir();
-	kelime_yazdir("Bugün hava güzel");
+	kelime_yazdir("BugÃ¼n hava gÃ¼zel");
 	k = "Beykoz";
 	//cout << "Kelime:";
 	//cin >> k;
@@ -34,7 +34,7 @@ int main(){
 	//sayilari_yazdir(7, 3);
 	s1 = 10;
 	s2 = 15;
-	cout << "Ýki sayý giriniz..:";
+	cout << "Ä°ki sayÄ± giriniz..:";
 	cin >> s1 >> s2;
 	sayilari_yazdir(s1, s2);
 	//sayilari_yazdir(s2, s1);
@@ -53,65 +53,65 @@ int main(){
 	//cout << "Kelime:";
 	//cin >> k;
 	karakter(k);
-	cout << "1234 Rakamlarý toplamý:" << rakam_toplami(1234) << endl;
-	cout << "2345012 Rakamlarý toplamý:" << rakam_toplami(2345012) << endl;
+	cout << "1234 RakamlarÄ± toplamÄ±:" << rakam_toplami(1234) << endl;
+	cout << "2345012 RakamlarÄ± toplamÄ±:" << rakam_toplami(2345012) << endl;
 
 	return 0;
-	//return iþlemi fonksiyonun deðer döndürmesini saðlar. 
-	//Bu adýmdan sonraki hiçbir kod çalýþmaz
-	cout << "Nasýlsýn?";
+	//return iÅŸlemi fonksiyonun deÄŸer dÃ¶ndÃ¼rmesini saÄŸlar. 
+	//Bu adÄ±mdan sonraki hiÃ§bir kod Ã§alÄ±ÅŸmaz
+	cout << "NasÄ±lsÄ±n?";
 
 }
 
 void yazdir() {
-	//Ekrana merhaba yazdýran fonksiyon
+	//Ekrana merhaba yazdÄ±ran fonksiyon
 	cout << "Merhaba" << endl;
 }
 
 void kelime_yazdir(string kelime) {
-	//Kendisine gönderilen kelimeyi ekrana yazdýran fonksiyon
+	//Kendisine gÃ¶nderilen kelimeyi ekrana yazdÄ±ran fonksiyon
 	cout << kelime << endl;
 }
 
 void ilkharf_yazdir(string kelime) {
-	//Kendisine gönderilen kelimenin ilk harfini ekrana yazdýran fonksiyon
+	//Kendisine gÃ¶nderilen kelimenin ilk harfini ekrana yazdÄ±ran fonksiyon
 	//cout << kelime[0];
 	kelime = kelime[0];
-	cout << "Ýlkharf:" << kelime << endl;
+	cout << "Ä°lkharf:" << kelime << endl;
 }
 
 void karsilastirma(string kelime1, string kelime2) {
-	//Kendisine gönderilen iki kelimeyi birbiyle karþýlaþtýrýp durumunu ekrana yazdýran fonksiyon
+	//Kendisine gÃ¶nderilen iki kelimeyi birbiyle karÅŸÄ±laÅŸtÄ±rÄ±p durumunu ekrana yazdÄ±ran fonksiyon
 	if (kelime1 == kelime2)
-		cout << kelime1 << " " << kelime2 << " kelimeler ayný" << endl;
+		cout << kelime1 << " " << kelime2 << " kelimeler aynÄ±" << endl;
 	else
-		cout << kelime1 << " " << kelime2 << " kelimeler ayný deðil" << endl;
+		cout << kelime1 << " " << kelime2 << " kelimeler aynÄ± deÄŸil" << endl;
 }
 
-//Kendisine gönderilen iki deðer arasýndaki deðerleri küçükten büyüðe doðru 1'er arttýrarak ekrana yazdýran fonksiyonu tanýmlayýnýz.
-//Ýlk girilen sayý daha büyükse swap(deger1,deger2) (yer deðiþtirme) fonksiyonunu kullanalým
-//Ör: 3 7 girilirse; 3 4 5 6 7
-//Ör: 7 3 girilirse; 3 4 5 6 7
+//Kendisine gÃ¶nderilen iki deÄŸer arasÄ±ndaki deÄŸerleri kÃ¼Ã§Ã¼kten bÃ¼yÃ¼ÄŸe doÄŸru 1'er arttÄ±rarak ekrana yazdÄ±ran fonksiyonu tanÄ±mlayÄ±nÄ±z.
+//Ä°lk girilen sayÄ± daha bÃ¼yÃ¼kse swap(deger1,deger2) (yer deÄŸiÅŸtirme) fonksiyonunu kullanalÄ±m
+//Ã–r: 3 7 girilirse; 3 4 5 6 7
+//Ã–r: 7 3 girilirse; 3 4 5 6 7
 
 void sayilari_yazdir(int sayi1, int sayi2) {
 	if (sayi1 > sayi2)
 		swap(sayi1, sayi2);
 	//swap: x=sayi1; sayi1=sayi2; sayi2=x;
 	for (int i = sayi1; i <= sayi2; i++)
-		//sayi1 içeriði deðiþmez
+		//sayi1 iÃ§eriÄŸi deÄŸiÅŸmez
 		cout << i << " ";
 	cout << endl;
 	for (sayi1; sayi1 <= sayi2; sayi1++)
-		//Bu döngüde sayi1 içerisinde saklanan deðerin içeriði deðiþir.
-		//Döngü bitiminde sayi1 sayi2'nin 1 fazlasýný tutar.
+		//Bu dÃ¶ngÃ¼de sayi1 iÃ§erisinde saklanan deÄŸerin iÃ§eriÄŸi deÄŸiÅŸir.
+		//DÃ¶ngÃ¼ bitiminde sayi1 sayi2'nin 1 fazlasÄ±nÄ± tutar.
 		cout << sayi1 << " ";
 	cout << endl;
 	cout << sayi1 << " " << sayi2 << endl;
 }
 
-//Kendisine gönderilen iki deðerin kuvvetini hesaplayan fonksiyon
-//Ör: Taban:2 Us:3 girilirse; 2^3= 8 çýktýsýný verecek
-//Ör: Taban:4 Us:2 girilirse; 4^2= 16 çýktýsýný verecek
+//Kendisine gÃ¶nderilen iki deÄŸerin kuvvetini hesaplayan fonksiyon
+//Ã–r: Taban:2 Us:3 girilirse; 2^3= 8 Ã§Ä±ktÄ±sÄ±nÄ± verecek
+//Ã–r: Taban:4 Us:2 girilirse; 4^2= 16 Ã§Ä±ktÄ±sÄ±nÄ± verecek
 
 void us_alma(int taban, int us) {
 	int sonuc = 1, i;
@@ -121,26 +121,27 @@ void us_alma(int taban, int us) {
 	cout << taban << "^" << us << "=" << sonuc << endl;
 }
 
-//void : deðer döndürmez
+//void : deÄŸer dÃ¶ndÃ¼rmez
 
-//Kendisine gönderilen iki tam sayýyý toplayýp toplam sonucunu geri döndüren fonksiyon
+//Kendisine gÃ¶nderilen iki tam sayÄ±yÄ± toplayÄ±p toplam sonucunu geri dÃ¶ndÃ¼ren fonksiyon
 int topla(int s1, int s2) {
 	//2 parametre var: s1,s2
 	return s1 + s2;
 }
 
-//Kendisine gönderilen üç tam sayýyý toplayýp toplam sonucunu geri döndüren fonksiyon
+//Kendisine gÃ¶nderilen Ã¼Ã§ tam sayÄ±yÄ± toplayÄ±p toplam sonucunu geri dÃ¶ndÃ¼ren fonksiyon
 int topla(int s1, int s2, int s3) {
 	//3 parametre var: s1,s2,s3
 	return s1 + s2 + s3;
 }
 
-//Kendisine gönderilen iki ondalýklý sayýyý toplayýp sonucunu geri döndüren fonksiyon
+//Kendisine gÃ¶nderilen iki ondalÄ±klÄ± sayÄ±yÄ± toplayÄ±p sonucunu geri dÃ¶ndÃ¼ren fonksiyon
 double topla(double sayi1, double sayi2) {
 	return sayi1 + sayi2;
 }
 
-//Kendisine gönderilen kelimenin karakter sayýsý tek ise kelimeyi karakter sayýsý kadar ekrana yazdýran, çift ise kelimeyi tersten 1 kez ekrana yazdýran fonksiyon
+//Kendisine gÃ¶nderilen kelimenin karakter sayÄ±sÄ± tek ise kelimeyi karakter sayÄ±sÄ± kadar ekrana yazdÄ±ran, 
+//Ã§ift ise kelimeyi tersten 1 kez ekrana yazdÄ±ran fonksiyon
 void karakter(string kelime) {
 	int uzunluk = kelime.length();
 	if (uzunluk % 2 == 0) {
@@ -158,8 +159,8 @@ void karakter(string kelime) {
 	}
 }
 
-//Kendisine gönderilen sayýnýn tüm rakamlarý toplayýp toplamý geri döndüren fonksiyon
-//Ör: 1234 gelirse; 1+2+3+4=10 hesaplayýp 10 deðerini geri döndürecek
+//Kendisine gÃ¶nderilen sayÄ±nÄ±n tÃ¼m rakamlarÄ±nÄ± toplayÄ±p toplamÄ± geri dÃ¶ndÃ¼ren fonksiyon
+//Ã–r: 1234 gelirse; 1+2+3+4=10 hesaplayÄ±p 10 deÄŸerini geri dÃ¶ndÃ¼recek
 int rakam_toplami(int sayi) {
 	int sonuc = 0;
 	while (sayi > 0)
