@@ -2,7 +2,9 @@
 #include <iostream>
 #include <random>
 #include <time.h>
+
 using namespace std;
+
 void yazdir();
 void pc();
 void kullanici();
@@ -10,6 +12,7 @@ void kontrol();
 
 char sos[3][3] = { '1','2','3','4','5','6','7','8','9' }; //public 2 boyutlu dizi (matris)
 bool k; //public değişken 
+//public tanımlanan tüm değişkenler bütün fonksiyonlar tarafından kullanılabilir.
 
 int main()
 {
@@ -28,6 +31,7 @@ int main()
 	} while (!k); //while(k==false);
 
 }
+
 void yazdir() {
 	for (int i = 0; i < 3; i++) {
 		cout << "| ";
@@ -37,6 +41,7 @@ void yazdir() {
 		cout << endl << "-------------" << endl;
 	}
 }
+
 void pc() {
 	//Random konum
 	char random[2] = { 'S','O' };
@@ -51,6 +56,7 @@ void pc() {
 	} while (sos[satir][sutun] == 'S' || sos[satir][sutun] == 'O');
 	sos[satir][sutun] = tercih;
 }
+
 void kullanici() {
 	char tercih;
 	char secim;
@@ -79,6 +85,7 @@ void kullanici() {
 	} while (secim != 'S' && secim != 'O');
 	sos[satir][sutun] = secim;
 }
+
 void kontrol() {
 	//Oyun bitti mi bitmedi mi kontrol gerçekleştireceğiz
 	k=false; //oyun bitmedi
@@ -98,19 +105,16 @@ void kontrol() {
 
 //Yapılacaklar:
 //Oyunda kazananı belirleyeceğiz.
-
-//Yöntem-1:
-//En son kim hamle yaptı bu bilgiyi tutacağız
-//Hamle sayısı belli olduğu için döngüde bir sayaç kullanılıp her hamlede bir arttırılarak sayaç değeri kimin hamle yaptığını tutabilir,
-//eğer tek ise pc, çift ise kullanıcı hamle yaptı şeklinde kontrol edilebilir.
-
-//Yöntem-2:
-//Bir bool değer kullanılır. En son pc hamle yaptıysa bu değerde true, kullanıcı hamle yaptıysa false değer tutulur.
-//Bu şekilde en son hamle yapan belirlenebilir. Bu kontrol bool değer yerine farklı veri türleri ile de kontrol ettirilebilir
-
-//Bu kontrol işlemi için bu yöntemlerin dışında farklı kontrol yöntemleri de kullanılabilir.
-
 //En son hamle yapan kişiden sonra bir fonksiyon çağrırır, yatay, dikey ve çapraz konumda SOS yazıldı mı kontrol edilir.
 
+//En son kim hamle yaptı bu bilgiyi tutacağız
+//1.Yöntem:
+//Hamle sayısı belli olduğu için döngüde bir sayaç kullanılıp her hamlede bir arttırılarak sayaç değeri kimin hamle yaptığını tutabilir,
+//eğer tek ise pc, çift ise kullanıcı hamle yaptı şeklinde kontrol edilebilir.
+//2.Yöntem:
+//Bir bool değer kullanılır. En son pc hamle yaptıysa bu değerde true, kullanıcı hamle yaptıysa false değer tutulur.
+//Bu şekilde en son hamle yapan belirlenebilir. Bu kontrol bool değer yerine farklı veri türleri ile de kontrol ettirilebilir
+//Diğer-Yöntemler:Bu kontrol işlemi için bu yöntemlerin dışında farklı kontrol yöntemleri de kullanılabilir.
+
 //Bilgisayarın daha anlamlı kararlar vermesi sağlanabilir (yapay zeka). 
-//1. olarak SOS yazmaya çalışması, 2. olarak bizim SOS yazmamızı engellemeye çalışacak hamleler yapması sağlanabilir. 
+//Bilgisayarın 1. olarak SOS yazmaya çalışması, 2. olarak bizim SOS yazmamızı engellemeye çalışacak hamleler yapması sağlanabilir. 
