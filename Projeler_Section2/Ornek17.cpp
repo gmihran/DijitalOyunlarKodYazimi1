@@ -16,7 +16,7 @@ int main()
 	setlocale(LC_ALL, "turkish");
 	//topla();
 	topla(3,4);
-	//cout << "2 sayý giriniz:";
+	//cout << "2 sayÄ± giriniz:";
 	//cin >> sayi1 >> sayi2;
 	topla(sayi1, sayi2);
 	topla(sayi1, sayi2, 5);
@@ -30,21 +30,21 @@ int main()
 
 	cout << "Toplam:" << toplam(3, 4) << endl;
 
-	int kare = pow(4, 2); //Kendisinde var olan bir fonksiyonu çaðýrdýk. Biz oluþturmadýk
+	int kare = pow(4, 2); //Kendisinde var olan bir fonksiyonu Ã§aÄŸÄ±rdÄ±k. Biz oluÅŸturmadÄ±k
 	cout << kare << endl;
-	int karekok = sqrt(16); //Kendisinde var olan bir fonksiyonu çaðýrdýk. Biz oluþturmadýk
+	int karekok = sqrt(16); //Kendisinde var olan bir fonksiyonu Ã§aÄŸÄ±rdÄ±k. Biz oluÅŸturmadÄ±k
 	cout << karekok << endl;
 	cout << toplam(5.2, 4.1) << endl;
 	cout << toplam(5, 2) << endl;
 	cout << toplam(5.0,4.2) << endl;
-	system("pause"); //console ekranýný bir tuþa basýncaya kadar bekletir
+	system("pause"); //console ekranÄ±nÄ± bir tuÅŸa basÄ±ncaya kadar bekletir
 	return 1;
 }
 
-//Kullanýcýnýn girdiði deðerleri toplayýp ekrana yazdýran fonksiyon
+//KullanÄ±cÄ±nÄ±n girdiÄŸi deÄŸerleri toplayÄ±p ekrana yazdÄ±ran fonksiyon
 void topla() {
 	int s1, s2;
-	cout << "Ýki sayý giriniz:";
+	cout << "Ä°ki sayÄ± giriniz:";
 	cin >> s1 >> s2;
 	cout <<"Toplam:" << s1 + s2 << endl;
 }
@@ -61,7 +61,7 @@ void topla(double a, double b, double c) {
 	cout << a + b + c << endl;
 }
 
-//Ýki sayýnýn toplam deðerini geri döndüren fonksiyon
+//Ä°ki sayÄ±nÄ±n toplam deÄŸerini geri dÃ¶ndÃ¼ren fonksiyon
 int toplam(int s1, int s2) {
 	return s1 + s2;
 }
