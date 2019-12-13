@@ -9,15 +9,15 @@ void kullanici();
 void kontrol();
 
 char sos[3][3] = { '1','2','3','4','5','6','7','8','9' }; //public 2 boyutlu dizi (matris)
-bool k; //public değişken 
+bool k; //public deÄŸiÅŸken 
 
 int main()
 {
 	srand(time(NULL));
-    //Kullanıcı ve bilgisayar arasında oynanacak
-	//Bilgisayar boş olan noktalara rastgele S-O yerleştirecek (random)
-	//Eğer daha önce bir değer girilmişse bu değerler değiştirilemez
-	//Tüm alanlar dolduğunda oyun biter
+    	//KullanÄ±cÄ± ve bilgisayar arasÄ±nda oynanacak
+	//Bilgisayar boÅŸ olan noktalara rastgele S-O yerleÅŸtirecek (random)
+	//EÄŸer daha Ã¶nce bir deÄŸer girilmiÅŸse bu deÄŸerler deÄŸiÅŸtirilemez
+	//TÃ¼m alanlar dolduÄŸunda oyun biter
 	do{
 	pc();
 	yazdir();
@@ -41,13 +41,13 @@ void pc() {
 	//Random konum
 	char random[2] = { 'S','O' };
 	//Random S-O
-	int so = rand() % 2 + 0; //0-1 arasında değer üretir
+	int so = rand() % 2 + 0; //0-1 arasÄ±nda deÄŸer Ã¼retir
 	char tercih = random[so];
-	//yukardaki işlemler yapay zeka mantığına dönüştürülebilir
+	//yukardaki iÅŸlemler yapay zeka mantÄ±ÄŸÄ±na dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lebilir
 	int satir, sutun;
 	do {
 		satir = rand() % 3 + 0;
-		sutun = rand() % 3 + 0; //1-9 arasında değer üretir
+		sutun = rand() % 3 + 0; //1-9 arasÄ±nda deÄŸer Ã¼retir
 	} while (sos[satir][sutun] == 'S' || sos[satir][sutun] == 'O');
 	sos[satir][sutun] = tercih;
 }
@@ -80,7 +80,7 @@ void kullanici() {
 	sos[satir][sutun] = secim;
 }
 void kontrol() {
-	//Oyun bitti mi bitmedi mi kontrol gerçekleştireceğiz
+	//Oyun bitti mi bitmedi mi kontrol gerÃ§ekleÅŸtireceÄŸiz
 	k=false; //oyun bitmedi
 	int sayac = 0;
 	for (int i = 0; i < 3; i++) {
@@ -96,9 +96,21 @@ void kontrol() {
 	}
 }
 
-//Yapılacaklar:
-//oyunda kazananı belirleyeceğiz.
-//En son kim hamle yaptı bu bilgiyi tut
-//main içerisindeki do-while döngüsü for döngüsüne dönüştürülüp (1-9 arasında) eğer tek ise pc, çift ise kullanıcı hamle yaptı diye kontrol edilebilir
-//En son hamle yapan kişiden sonra bir fonksiyon çağrırır, yatay, dikey ve çapraz konumda SOS yazıldı mı kontrol edilir.
-//bilgisayarın daha anlamlı karar vermesini sağlayacağız (yapay zeka). 
+//YapÄ±lacaklar:
+//Oyunda kazananÄ± belirleyeceÄŸiz.
+
+//YÃ¶ntem-1:
+//En son kim hamle yaptÄ± bu bilgiyi tutacaÄŸÄ±z
+//Hamle sayÄ±sÄ± belli olduÄŸu iÃ§in dÃ¶ngÃ¼de bir sayaÃ§ kullanÄ±lÄ±p her hamlede bir arttÄ±rÄ±larak sayaÃ§ deÄŸeri kimin hamle yaptÄ±ÄŸÄ±nÄ± tutabilir,
+//eÄŸer tek ise pc, Ã§ift ise kullanÄ±cÄ± hamle yaptÄ± ÅŸeklinde kontrol edilebilir.
+
+//YÃ¶ntem-2:
+//Bir bool deÄŸer kullanÄ±lÄ±r. En son pc hamle yaptÄ±ysa bu deÄŸerde true, kullanÄ±cÄ± hamle yaptÄ±ysa false deÄŸer tutulur.
+//Bu ÅŸekilde en son hamle yapan belirlenebilir. Bu kontrol bool deÄŸer yerine farklÄ± veri tÃ¼rleri ile de kontrol ettirilebilir
+
+//Bu kontrol iÅŸlemi iÃ§in bu yÃ¶ntemlerin dÄ±ÅŸÄ±nda farklÄ± kontrol yÃ¶ntemleri de kullanÄ±labilir.
+
+//En son hamle yapan kiÅŸiden sonra bir fonksiyon Ã§aÄŸrÄ±rÄ±r, yatay, dikey ve Ã§apraz konumda SOS yazÄ±ldÄ± mÄ± kontrol edilir.
+
+//BilgisayarÄ±n daha anlamlÄ± kararlar vermesi saÄŸlanabilir (yapay zeka). 
+//1. olarak SOS yazmaya Ã§alÄ±ÅŸmasÄ±, 2. olarak bizim SOS yazmamÄ±zÄ± engellemeye Ã§alÄ±ÅŸacak hamleler yapmasÄ± saÄŸlanabilir. 
