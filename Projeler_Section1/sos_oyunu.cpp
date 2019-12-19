@@ -5,7 +5,7 @@
 #include <time.h>
 using namespace std;
 char sos[3][3] = { '1','2','3','4','5','6','7','8','9' };
-//public değişken tanımlaması yaptık. Tüm fonksiyonlara sos dizisine (matrisine) erişebilir.
+//public deÄŸiÅŸken tanÄ±mlamasÄ± yaptÄ±k. TÃ¼m fonksiyonlara sos dizisine (matrisine) eriÅŸebilir.
 bool sonBitirici = false;
 
 void pc();
@@ -32,12 +32,13 @@ int main()
 void pc() {
 	int satir, sutun, tercih;
 	char t[2] = { 'S','O' }, s;
-	tercih = rand() % 2 + 0; //0-1 arasında değer üretir
+	tercih = rand() % 2 + 0; //0-1 arasÄ±nda deÄŸer Ã¼retir
 	s = t[tercih];
 	do {
-		satir = rand() % 3 + 0; //0-2 arasında değer üretir
-		sutun = rand() % 3 + 0; //0-2 arasında değer üretir
-	} while (sos[satir][sutun]=='S' || sos[satir][sutun] == 'O'); //Amaç; o konumda S veya O değeri varsa tekrar değer üretmesini sağlamak.
+		satir = rand() % 3 + 0; //0-2 arasÄ±nda deÄŸer Ã¼retir
+		sutun = rand() % 3 + 0; //0-2 arasÄ±nda deÄŸer Ã¼retir
+	} while (sos[satir][sutun]=='S' || sos[satir][sutun] == 'O'); 
+	//AmaÃ§; o konumda S veya O deÄŸeri varsa tekrar deÄŸer Ã¼retmesini saÄŸlamak.
 	sos[satir][sutun] = s;
 }
 void yazdir() {
@@ -65,37 +66,37 @@ void oyuncu() {
 			for (int j = 0; j < 3; j++)
 			{
 				if (konum == sos[i][j] && konum != 'S' && konum != 'O') {
-					//Mehmet Mert Gündüz bug'ı buldu
-					//konum != 'S' && konum == 'O' olmalı
+					//Mehmet Mert GÃ¼ndÃ¼z bug'Ä± buldu
+					//konum != 'S' && konum == 'O' olmalÄ±
 					satir = i;
 					sutun = j;
-					kontrol = false; //bu konuma değer girebilir
-					break; //içteki (j) döngüsünü kırar
+					kontrol = false; //bu konuma deÄŸer girebilir
+					break; //iÃ§teki (j) dÃ¶ngÃ¼sÃ¼nÃ¼ kÄ±rar
 				}
 			}
 			if (!kontrol) //if(kontrol==false)
-				break; //dıştaki (i) döngüsünü kırar
+				break; //dÄ±ÅŸtaki (i) dÃ¶ngÃ¼sÃ¼nÃ¼ kÄ±rar
 		}
 	} while (kontrol);
 	do
 	{
 		cout << "S-O:";
 		cin >> s;
-	} while (s!='S' && s!='O'); //S veya O değerine eşit değilse tekrar değer girsin
+	} while (s!='S' && s!='O'); //S veya O deÄŸerine eÅŸit deÄŸilse tekrar deÄŸer girsin
 	sos[satir][sutun] = s;
 }
 
 void kontrol() {
-	//Bu fonksiyonun amacı, S veya O yazacak bir hücrenin olmaması durumunda oyunun bitmesini sağlamak
-	//1 ile 9 arasındaki değerlerin bu matriste bulunmaması durumunda gerçekleşir.
-	//S veya O değerine eşit olmayan değerlerin sayısı 0 ise artık hamle yapamayız. Oyun burada sona erer
+	//Bu fonksiyonun amacÄ±, S veya O yazacak bir hÃ¼crenin olmamasÄ± durumunda oyunun bitmesini saÄŸlamak
+	//1 ile 9 arasÄ±ndaki deÄŸerlerin bu matriste bulunmamasÄ± durumunda gerÃ§ekleÅŸir.
+	//S veya O deÄŸerine eÅŸit olmayan deÄŸerlerin sayÄ±sÄ± 0 ise artÄ±k hamle yapamayÄ±z. Oyun burada sona erer
 	int sayac = 0;
 	for (int i = 0; i < 3; i++)
 	{
 		for (int j = 0; j < 3; j++)
 		{
 			if (sos[i][j] != 'S' && sos[i][j] != 'O')
-				//Buradaki değer S ve O değerlerine eşit değilse sayaç artar
+				//Buradaki deÄŸer S ve O deÄŸerlerine eÅŸit deÄŸilse sayaÃ§ artar
 				sayac++;
 		}
 	}
@@ -103,18 +104,18 @@ void kontrol() {
 		sonBitirici = true; //oyun bitti
 }
 
-//Yapılacaklar:
-//Oyunda kazananı belirleyeceğiz.
-//En son hamle yapan kişiden sonra bir fonksiyon çağrırır, yatay, dikey ve çapraz konumda SOS yazıldı mı kontrol edilir.
+//YapÄ±lacaklar:
+//Oyunda kazananÄ± belirleyeceÄŸiz.
+//En son hamle yapan kiÅŸiden sonra bir fonksiyon Ã§aÄŸrÄ±rÄ±r, yatay, dikey ve Ã§apraz konumda SOS yazÄ±ldÄ± mÄ± kontrol edilir.
 
-//En son kim hamle yaptı bu bilgiyi tutacağız
-//1.Yöntem:
-//Hamle sayısı belli olduğu için döngüde bir sayaç kullanılıp her hamlede bir arttırılarak sayaç değeri kimin hamle yaptığını tutabilir,
-//eğer tek ise pc, çift ise kullanıcı hamle yaptı şeklinde kontrol edilebilir.
-//2.Yöntem:
-//Bir bool değer kullanılır. En son pc hamle yaptıysa bu değerde true, kullanıcı hamle yaptıysa false değer tutulur.
-//Bu şekilde en son hamle yapan belirlenebilir. Bu kontrol bool değer yerine farklı veri türleri ile de kontrol ettirilebilir
-//Diğer-Yöntemler:Bu kontrol işlemi için bu yöntemlerin dışında farklı kontrol yöntemleri de kullanılabilir.
+//En son kim hamle yaptÄ± bu bilgiyi tutacaÄŸÄ±z
+//1.YÃ¶ntem:
+//Hamle sayÄ±sÄ± belli olduÄŸu iÃ§in dÃ¶ngÃ¼de bir sayaÃ§ kullanÄ±lÄ±p her hamlede bir arttÄ±rÄ±larak sayaÃ§ deÄŸeri kimin hamle yaptÄ±ÄŸÄ±nÄ± tutabilir,
+//eÄŸer tek ise pc, Ã§ift ise kullanÄ±cÄ± hamle yaptÄ± ÅŸeklinde kontrol edilebilir.
+//2.YÃ¶ntem:
+//Bir bool deÄŸer kullanÄ±lÄ±r. En son pc hamle yaptÄ±ysa bu deÄŸerde true, kullanÄ±cÄ± hamle yaptÄ±ysa false deÄŸer tutulur.
+//Bu ÅŸekilde en son hamle yapan belirlenebilir. Bu kontrol bool deÄŸer yerine farklÄ± veri tÃ¼rleri ile de kontrol ettirilebilir
+//DiÄŸer-YÃ¶ntemler:Bu kontrol iÅŸlemi iÃ§in bu yÃ¶ntemlerin dÄ±ÅŸÄ±nda farklÄ± kontrol yÃ¶ntemleri de kullanÄ±labilir.
 
-//Bilgisayarın daha anlamlı kararlar vermesi sağlanabilir (yapay zeka). 
-//Bilgisayarın 1. olarak SOS yazmaya çalışması, 2. olarak bizim SOS yazmamızı engellemeye çalışacak hamleler yapması sağlanabilir. 
+//BilgisayarÄ±n daha anlamlÄ± kararlar vermesi saÄŸlanabilir (yapay zeka). 
+//BilgisayarÄ±n 1. olarak SOS yazmaya Ã§alÄ±ÅŸmasÄ±, 2. olarak bizim SOS yazmamÄ±zÄ± engellemeye Ã§alÄ±ÅŸacak hamleler yapmasÄ± saÄŸlanabilir. 
