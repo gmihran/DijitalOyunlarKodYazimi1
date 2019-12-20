@@ -79,7 +79,7 @@ void ptr2() {
 	cout << "&ptr2:" << &ptr2 << endl;
 }
 
-//Kendisine gönderilen pointer bir kelime tutuyor. Bu kelimeyi tersine dönüştüren fonksiyon:
+//Kendisine gönderilen kelimenin adresini (pointer) tutan fonksiyon tanımlayalım. Bu kelimeyi fonksiyon içinde tersine dönüştürelim.
 //ÖR: kendisine "kedi" kelimesi geldiğinde, kelime "idek" olacak.
 void kelimenin_tersi(string *kelime) {
 	string ters = "";
