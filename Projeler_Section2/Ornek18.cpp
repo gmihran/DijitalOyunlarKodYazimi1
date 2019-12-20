@@ -15,7 +15,8 @@ void ptrptr();
 int * rastgele();
 
 void tersine(string *kelime);
-//string türünde değer içeren fonksiyonların mutlaka using namespace std; tanımlamasının altında olması gerekiyor. Ya da bununla ilgili olan kütüphaneyi projenize dahil edebilirsiniz.
+//string tÃ¼rÃ¼nde deÄŸer iÃ§eren fonksiyonlarÄ±n mutlaka using namespace std; tanÄ±mlamasÄ±nÄ±n altÄ±nda olmasÄ± gerekiyor. 
+//Ya da bununla ilgili olan kÃ¼tÃ¼phaneyi projenize dahil edebilirsiniz.
 
 int main()
 {
@@ -27,23 +28,23 @@ int main()
 	
 	ptr();
 	
-	cout << "Fonksiyon çağrılmadan önce:\n";
+	cout << "Fonksiyon Ã§aÄŸrÄ±lmadan Ã¶nce:\n";
 	cout << "s1:" << s1 << " s2:" << s2 << endl;
 	arttir5(&s1, &s2);
-	cout << "Fonksiyon çağrıldıktan sonra:\n";
+	cout << "Fonksiyon Ã§aÄŸrÄ±ldÄ±ktan sonra:\n";
 	cout << "s1:" << s1 << " s2:" << s2 << endl;
 	
 	
-	cout << "Sayı:";
+	cout << "SayÄ±:";
 	cin >> s1;
 	
 	kat(s1);
-	cout << "kat(s1) fonksiyonu çalışıyor..\n";
-	cout << "sayı:" << s1 << endl;
+	cout << "kat(s1) fonksiyonu Ã§alÄ±ÅŸÄ±yor..\n";
+	cout << "sayÄ±:" << s1 << endl;
 
 	kat(&s1);
-	cout << "kat(&s1) fonksiyonu çalışıyor..\n";
-	cout << "sayı:" << s1 << endl;
+	cout << "kat(&s1) fonksiyonu Ã§alÄ±ÅŸÄ±yor..\n";
+	cout << "sayÄ±:" << s1 << endl;
 	
 
 	string kelime;
@@ -63,15 +64,15 @@ int main()
 
 void ptr() {
 	int sayi = 10;
-	int *p = &sayi; //sayi değişkeninin bellek adresini p pointer (adres tutucuya/işaretçiye) atadık
+	int *p = &sayi; //sayi deÄŸiÅŸkeninin bellek adresini p pointer (adres tutucuya/iÅŸaretÃ§iye) atadÄ±k
 	cout << "sayi:" << sayi << endl;
 	cout << "&sayi:" << &sayi << endl;
 	cout << "p:" << p << endl;
-	cout << "*p:" << *p << endl; //*p pointer içinde tutulan adresteki değere ulaşmamızı sağlar
+	cout << "*p:" << *p << endl; //*p pointer iÃ§inde tutulan adresteki deÄŸere ulaÅŸmamÄ±zÄ± saÄŸlar
 	cout << "&p:" << &p << endl;
 
-	//Kullanıcının girdiği değerin tutulduğu bellek adresine giderek bu değeri 5 arttıralım.
-	cout << "Sayı:";
+	//KullanÄ±cÄ±nÄ±n girdiÄŸi deÄŸerin tutulduÄŸu bellek adresine giderek bu deÄŸeri 5 arttÄ±ralÄ±m.
+	cout << "SayÄ±:";
 	cin >> sayi;
 	int *pointer = &sayi;
 	*pointer += 5; // *pointer = *pointer + 5;
@@ -79,34 +80,34 @@ void ptr() {
 
 }
 
-//Kendisine gönderilen bellek adreslerinin içinde saklanan değerleri 5 arttıran fonksiyon:
+//Kendisine gÃ¶nderilen bellek adreslerinin iÃ§inde saklanan deÄŸerleri 5 arttÄ±ran fonksiyon:
 void arttir5(int *p1, int *p2) {
 	*p1 = *p1 + 5;
 	*p2 += 5;
 }
 
-//Problem: Kullanıcıdan alınan değeri fonksiyon parametre olarak alsın ve 
-//bu değeri fonksiyon içerisinde kullanıcının girdiği kata eşitlesin
-//Ör:main içinde 4 girilirse, fonksiyonda 5 girilirse, mainden gelen 4 değeri 20 olacak
+//Problem: KullanÄ±cÄ±dan alÄ±nan deÄŸeri fonksiyon parametre olarak alsÄ±n ve 
+//bu deÄŸeri fonksiyon iÃ§erisinde kullanÄ±cÄ±nÄ±n girdiÄŸi kata eÅŸitlesin
+//Ã–r:main iÃ§inde 4 girilirse, fonksiyonda 5 girilirse, mainden gelen 4 deÄŸeri 20 olacak
 void kat(int *p) {
 	int k;
-	cout << "Kat değeri:";
+	cout << "Kat deÄŸeri:";
 	cin >> k;
 	*p *= k; // *p = *p * k;
 }
 
-//Fonksiyona pointer yerine değer göndererek değerin main içerisindeki durumunu gözlemleyelim
+//Fonksiyona pointer yerine deÄŸer gÃ¶ndererek deÄŸerin main iÃ§erisindeki durumunu gÃ¶zlemleyelim
 void kat(int sayi) {
-	//Değerin kopyasını alıp, farklı bir bellek adresinde tutar
-	//Bu nedenle kendisine gönderilen değer değiştirilemez
+	//DeÄŸerin kopyasÄ±nÄ± alÄ±p, farklÄ± bir bellek adresinde tutar
+	//Bu nedenle kendisine gÃ¶nderilen deÄŸer deÄŸiÅŸtirilemez
 	int k;
-	cout << "Kat değeri:";
+	cout << "Kat deÄŸeri:";
 	cin >> k;
 	sayi *= k; // sayi = sayi * k;
 }
 
-//Kendisine gönderilen kelimenin adresini (pointer) tutan fonksiyon tanımlayalım. Bu kelimeyi fonksiyon içinde tersine dönüştürelim.
-//ÖR: kendisine "kedi" kelimesi geldiğinde, kelime "idek" olacak.
+//Kendisine gÃ¶nderilen kelimenin adresini (pointer) tutan fonksiyon tanÄ±mlayalÄ±m. Bu kelimeyi fonksiyon iÃ§inde tersine dÃ¶nÃ¼ÅŸtÃ¼relim.
+//Ã–R: kendisine "kedi" kelimesi geldiÄŸinde, kelime "idek" olacak.
 void tersine(string *kelime) {
 	string ters="";
 	int uzunluk = (*kelime).length();
@@ -125,7 +126,7 @@ void ptrptr() {
 	cout << "*ptr:" << *ptr << endl;
 
 	*ptr = 20;
-	cout << "*ptr = 20; işleminden sonra..:" << endl;
+	cout << "*ptr = 20; iÅŸleminden sonra..:" << endl;
 	cout << "var:" << var << endl;
 	cout << "*ptr:" << *ptr << endl;
 
@@ -133,7 +134,7 @@ void ptrptr() {
 	**ptr2 = 30;
 
 	var = 30;
-	cout << "**ptr2 = 30; işleminden sonra..:" << endl;
+	cout << "**ptr2 = 30; iÅŸleminden sonra..:" << endl;
 	cout << "var:" << var << endl;
 	cout << "*ptr:" << *ptr << endl;
 	cout << "ptr:" << ptr << endl;
@@ -143,7 +144,7 @@ void ptrptr() {
 	cout << "**ptr2:" << **ptr2 << endl;
 }
 
-//random ile oluşturulan 1-10 arasındaki 10 sayının toplamının tutulduğu adresi çağrıldığı fonksiyona gönderen fonksiyonu yazalım.
+//random ile oluÅŸturulan 1-10 arasÄ±ndaki 10 sayÄ±nÄ±n toplamÄ±nÄ±n tutulduÄŸu adresi Ã§aÄŸrÄ±ldÄ±ÄŸÄ± fonksiyona gÃ¶nderen fonksiyonu yazalÄ±m.
 int * rastgele() {
 	int sayi, toplam=0;
 	for (int i = 1; i <= 10; i++)
