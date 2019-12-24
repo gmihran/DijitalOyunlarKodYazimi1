@@ -43,16 +43,16 @@ void kelime_yazdir(string* kelime) {
 	for (int i = 0; *(kelime + i) != "\n"; i++)
 	{
 		cout << *(kelime + i) << endl;
-		//kelime pointer'ýnda tutulan adres deðerini her arttýrdýðýmýzda dizinin diðer elemanlarýna ulaþabiliriz
+		//kelime pointer'Ä±nda tutulan adres deÄŸerini her arttÄ±rdÄ±ÄŸÄ±mÄ±zda dizinin diÄŸer elemanlarÄ±na ulaÅŸabiliriz
 	}
 }
 
 int main()
 {
 	srand(time(NULL));
-	const double PI=3.14; //const ile bu deðerin deðiþtirilemez yani sabit bir deðer olduðunu tanýmlamýþ olduk
-	//PI = 3; //PI sayýsý program içerisinde deðiþtirilemez
-	//daire çevresi hesaplayalým
+	const double PI=3.14; //const ile bu deÄŸerin deÄŸiÅŸtirilemez yani sabit bir deÄŸer olduÄŸunu tanÄ±mlamÄ±ÅŸ olduk
+	//PI = 3; //PI sayÄ±sÄ± program iÃ§erisinde deÄŸiÅŸtirilemez
+	//daire Ã§evresi hesaplayalÄ±m
 
 	int r=10;
 	double cevre = PI * 2 * r;
@@ -87,31 +87,21 @@ int main()
 
 	cout << endl;
 	string kelimeler[5] = { "gunes","dunya","uzay","gezegen","\n" };
-	kelime_yazdir(&kelimeler[0]); //kelimeler dizisinin ilk indisindeki deðerin tutulduðu adresi fonksiyona gönderdik
+	kelime_yazdir(&kelimeler[0]); //kelimeler dizisinin ilk indisindeki deÄŸerin tutulduÄŸu adresi fonksiyona gÃ¶nderdik
 }
 
 
-
-void rastgele(int* sayilar) {
-	for (int i = 0; i < 10; i++)
-	{
-		*(sayilar+i) += 1; 
-		//sayilar pointer'ýnda tutulan adres deðerini her arttýrdýðýmýzda dizinin diðer elemanlarýna ulaþabiliriz
-	}
-}
-
-
-//Dairenin çevresini hesaplayan fonksiyon
+//Dairenin Ã§evresini hesaplayan fonksiyon
 void c(double pi, int r) {
-	//main fonksiyonundaki const pi sayýsýnýn kopyasýný aldýk
+	//main fonksiyonundaki const pi sayÄ±sÄ±nÄ±n kopyasÄ±nÄ± aldÄ±k
 	double cevre = pi * 2 * r;
 	cout << cevre << endl;
 }
 
-//Dairenin çevresini hesaplayan fonksiyon
+//Dairenin Ã§evresini hesaplayan fonksiyon
 void c2(const double *pi, int r) {
-	//main fonksiyonundaki const pi sayýsýnýn adresteki deðerini aldýk
-	//*pi = 3; //*pi deðeri deðiþtirilemez (const)
+	//main fonksiyonundaki const pi sayÄ±sÄ±nÄ±n adresteki deÄŸerini aldÄ±k
+	//*pi = 3; //*pi deÄŸeri deÄŸiÅŸtirilemez (const)
 	double cevre = *pi * 2 * r;
 	cout << cevre << endl;
 }
@@ -122,6 +112,14 @@ void puan_arttir(int* puan) {
 
 void puan_yazdir(const int* puan) {
 	cout <<"Puan:" << *puan << endl;
-	//*puan += 1; //*puan deðeri deðiþtirilemez
+	//*puan += 1; //*puan deÄŸeri deÄŸiÅŸtirilemez
 }
 
+//fonksiyona gÃ¶nderilen adreste yer alan (dizi/array) int deÄŸerlerini 1'er arttÄ±ran fonksiyon:
+void rastgele(int* sayilar) {
+	for (int i = 0; i < 10; i++)
+	{
+		*(sayilar+i) += 1; 
+		//sayilar pointer'Ä±nda tutulan adres deÄŸerini her arttÄ±rdÄ±ÄŸÄ±mÄ±zda dizinin diÄŸer elemanlarÄ±na ulaÅŸabiliriz
+	}
+}
