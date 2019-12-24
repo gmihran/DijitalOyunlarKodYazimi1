@@ -48,9 +48,9 @@ int main()
 {
 	srand(time(NULL));
 	const double PI = 3.14;
-	//PI = 3; //const ile tanımlanan değişkenlerin içinde saklanan değer değiştirilemez yani bu değer sabittir.
+	//PI = 3; //const ile tanÄ±mlanan deÄŸiÅŸkenlerin iÃ§inde saklanan deÄŸer deÄŸiÅŸtirilemez yani bu deÄŸer sabittir.
 
-	//Dairenin çevresini hesaplayalım
+	//Dairenin Ã§evresini hesaplayalÄ±m
 	int r = 10;
 	double cevre;
 	cevre = PI * 2 * r;
@@ -82,7 +82,7 @@ int main()
 	}
 	cout << endl;
 
-	rastgele(&sayilar[0]); //fonksiyona ilk değerin adresini gönderdik
+	rastgele(&sayilar[0]); //fonksiyona ilk deÄŸerin adresini gÃ¶nderdik
 	for (int i = 0; i < 10; i++)
 	{
 		cout << sayilar[i] << "\t";
@@ -92,26 +92,20 @@ int main()
 	string kelimeler[5] = { "armut","elma","portakal","visne","\n" };
 	kelime_yazdir(&kelimeler[0]);
 }
-//fonksiyona gönderilen adreste yer alan (dizi/array) int değerlerini 1'er arttıran fonksiyon:
-void rastgele(int* sayilar) {
-	for (int i = 0; i < 10; i++)
-	{
-		*(sayilar+i) += 1;
-	}
-}
 
-//Dairenin çevresini hesaplayan fonksiyon
+
+//Dairenin Ã§evresini hesaplayan fonksiyon
 void c(double pi, int r) {
-	//pi sayısı const PI değerinin kopyasıyla çalıştığı için bu değerin sabit olarak tanımlanması gerekmemektedir.
-	pi = 3; //pi const olarak tanımlanmadığı için değiştirilebilir.
+	//pi sayÄ±sÄ± const PI deÄŸerinin kopyasÄ±yla Ã§alÄ±ÅŸtÄ±ÄŸÄ± iÃ§in bu deÄŸerin sabit olarak tanÄ±mlanmasÄ± gerekmemektedir.
+	pi = 3; //pi const olarak tanÄ±mlanmadÄ±ÄŸÄ± iÃ§in deÄŸiÅŸtirilebilir.
 	cout << pi * 2 * r << endl;
 }
 
-//Dairenin çevresini hesaplayan fonksiyon
+//Dairenin Ã§evresini hesaplayan fonksiyon
 void c(const double* pi, int r) {
-	//pi sayısı const PI değerinin kopyasıyla çalıştığı için bu değerin sabit olarak tanımlanması gerekmemektedir.
-	//*pi = 3; //pi pointer'ındaki değer değiştirilemez
-	//main içerisinde pi değeri const tanımlandığı için bu değeri tutan pointer mutlaka const olarak tanımlanmalıdır.
+	//pi sayÄ±sÄ± const PI deÄŸerinin kopyasÄ±yla Ã§alÄ±ÅŸtÄ±ÄŸÄ± iÃ§in bu deÄŸerin sabit olarak tanÄ±mlanmasÄ± gerekmemektedir.
+	//*pi = 3; //pi pointer'Ä±ndaki deÄŸer deÄŸiÅŸtirilemez
+	//main iÃ§erisinde pi deÄŸeri const tanÄ±mlandÄ±ÄŸÄ± iÃ§in bu deÄŸeri tutan pointer mutlaka const olarak tanÄ±mlanmalÄ±dÄ±r.
 	cout << *pi * 2 * r << endl;
 }
 
@@ -121,6 +115,13 @@ void puan_arttir(int* puan) {
 
 void puan_yazdir(const int* puan) {
 	cout << "Puan:" << *puan << endl;
-	//*puan += 1; //const olduğu için değer değiştirilemez.
+	//*puan += 1; //const olduÄŸu iÃ§in deÄŸer deÄŸiÅŸtirilemez.
 }
 
+//fonksiyona gÃ¶nderilen adreste yer alan (dizi/array) int deÄŸerlerini 1'er arttÄ±ran fonksiyon:
+void rastgele(int* sayilar) {
+	for (int i = 0; i < 10; i++)
+	{
+		*(sayilar+i) += 1;
+	}
+}
