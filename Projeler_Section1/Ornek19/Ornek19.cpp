@@ -1,4 +1,4 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -6,6 +6,10 @@
 using namespace std;
 int main()
 {
+	//Kaynaklar: 
+	//https://turkmuhendis.net/cppprogramlama/dosya-islemleri/
+	//https://www.yusufsezer.com.tr/cpp-dosya-islemleri/
+	
 	//Bu konudan (dosya işlemleri ve try catch) sınavda sorumlu değilsiniz. Sınavda soru gelmeyecek.
 	//Dosya girdi-çıktı işlemleri için üç sınıf tanımlanmıştır.
 	//ifstream → Dosya okuma
@@ -15,8 +19,10 @@ int main()
 	fstream dosya("hatalar.txt",ios::app);
 	//Dosyayı açma kipi:
 	/*Çıktı dosyaları aşağırdaki farklı dosya açama modları kullanılarak  açılabilir.
-	ios::out : Yazma işlemi dosyanın başından başlayarak yapılır ve daha önceden veri girilmişse yeni veriler bu verilerin üstüne yazılır.
-	ios::app : Yazma işlemi dosyanın en son verisin olduğu yerden başlayarak yapılır ve daha önceden veri girilmişse herhangi bir veri kaybı yaşanmaz.
+	ios::out : Yazma işlemi dosyanın başından başlayarak yapılır ve daha önceden veri girilmişse 
+	//yeni veriler bu verilerin üstüne yazılır.
+	ios::app : Yazma işlemi dosyanın en son verisin olduğu yerden başlayarak yapılır ve daha önceden veri girilmişse 
+	//herhangi bir veri kaybı yaşanmaz.
 	Eğer dosya tanımında dosya açma modu kullanmazsak, varsayılan mod ios::out olacaktır.
 	*/
 	if (!dosya)
@@ -33,11 +39,14 @@ int main()
 		int hata;
 		if (sayi < 0 || sayi > 100) {
 			hata = 1;
-			throw hata; //girilen sayının 1 ile 100 arasında olmaması durumunda hata oluşacağını tanımladık. Bu durumunda catch (int hata) fonksiyonunun içindeki kod satırları çalışır.
+			throw hata; //girilen sayının 1 ile 100 arasında olmaması durumunda hata oluşacağını tanımladık. 
+			//Bu durumunda catch (int hata) fonksiyonunun içindeki kod satırları çalışır.
 		}
 		else if (sayi == 0) {
 			hata = 0;
-			throw hata;//girilen sayının 0 olması veya klavyeden sayısal bir değerin girilmemesi (metin girişi yapılması) durumunda hata oluşacağını tanımladık. Bu durumunda catch (int hata) fonksiyonunun içindeki kod satırları çalışır.
+			throw hata;//girilen sayının 0 olması veya klavyeden sayısal bir değerin girilmemesi 
+			//(metin girişi yapılması) durumunda hata oluşacağını tanımladık. Bu durumunda catch (int hata) 
+			//fonksiyonunun içindeki kod satırları çalışır.
 			//metin girişi yapıldığında değişkenin içerisine 0 değeri atanıyor
 		}
 			
@@ -50,7 +59,8 @@ int main()
 			cout << "Hatali giris\n";
 		else
 			cout << "Sayi 1 ile 100 arasinda olmalidir\n";
-		dosya << hata << endl; //dosyaya hata içerisinde saklanan değerin yazılmasını sağlar. Dosyayı ios::app kipiyle açıldığı için dosyayının sonuna ekleme yapar.
+		dosya << hata << endl; //dosyaya hata içerisinde saklanan değerin yazılmasını sağlar. 
+		//Dosyayı ios::app kipiyle açıldığı için dosyayının sonuna ekleme yapar.
 	}
 
 	//dosya.seekp(0); //bu kod ile 0. byte değerine kursör gönderilir.
@@ -112,7 +122,8 @@ int main()
 	dosyaOku2.seekg(0); //Dosyanın başına (0.byte değerine) gider 
 
 	if (dosyaOku2.eof()) {
-		cout << "Dosyanin sonu\n"; //Bu kod satırı dosyaOku2.seekg(0); bu adım gerçekleştiği için çalışmaz. Kursör (imleç) dosyanın başına gitti
+		cout << "Dosyanin sonu\n"; //Bu kod satırı dosyaOku2.seekg(0); bu adım gerçekleştiği için çalışmaz. 
+		//Kursör (imleç) dosyanın başına gitti
 	}
 	string aranan;
 	cout << "Soyadini getirmek istediginiz personelin adi:";
