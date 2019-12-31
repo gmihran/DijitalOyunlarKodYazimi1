@@ -15,30 +15,31 @@ void rastgele5_toplam();
 int main()
 {
 	setlocale(LC_ALL, "turkish");
-	srand(time(NULL)); //Program her çalıştırıldığında Random ile üretilen değerlerin farklı değerler olmasını sağlar. Ama bu sayının farklılıklarını ifade etmez. Yani 5 üretildiyse tekrar üretilebilir.
+	srand(time(NULL)); //Program her Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda Random ile Ã¼retilen deÄŸerlerin farklÄ± deÄŸerler olmasÄ±nÄ± saÄŸlar. Ama bu sayÄ±nÄ±n farklÄ±lÄ±klarÄ±nÄ± ifade etmez. Yani 5 Ã¼retildiyse tekrar Ã¼retilebilir.
 	//sayi();
 
-	cout << "faktoriyel() fonksiyonu çalışıyor...\n";
+	cout << "faktoriyel() fonksiyonu Ã§alÄ±ÅŸÄ±yor...\n";
 	cout <<"0!=" << faktoriyel(0) << endl;
 	cout <<"5!=" << faktoriyel(5) << endl;
 	cout <<"-4!=" << faktoriyel(-4) << endl;
 	if (faktoriyel(-4) == 0)
-		cout << -4 << " sayısının faktöriyeli yoktur.\n";
+		cout << -4 << " sayÄ±sÄ±nÄ±n faktÃ¶riyeli yoktur.\n";
 
-	cout << "faktoriyel_yazdir() fonksiyonu çalışıyor...\n";
+	cout << "faktoriyel_yazdir() fonksiyonu Ã§alÄ±ÅŸÄ±yor...\n";
 	faktoriyel_yazdir(-4);
 	faktoriyel_yazdir(0);
 	faktoriyel_yazdir(6);
 
-	cout << "rastgele5_toplam() fonksiyonu çalışıyor...\n";
+	cout << "rastgele5_toplam() fonksiyonu Ã§alÄ±ÅŸÄ±yor...\n";
 	rastgele5_toplam();
 
 	system("pause");
 	return 0;
 }
 
-//Örnek-1:
-//Kendisine gönderilen iki tamsayı değerinden büyük olanın karesini, sayılar eşitse sayılardan herhangi birini geri döndüren fonksiyonu yazınız.
+//Ã–rnek-1:
+//Kendisine gÃ¶nderilen iki tamsayÄ± deÄŸerinden bÃ¼yÃ¼k olanÄ±n karesini, 
+//sayÄ±lar eÅŸitse sayÄ±lardan herhangi birini geri dÃ¶ndÃ¼ren fonksiyonu yazÄ±nÄ±z.
 int kare(int sayi1, int sayi2) {
 	if (sayi1 > sayi2)
 		return sayi1 * sayi1;
@@ -47,66 +48,69 @@ int kare(int sayi1, int sayi2) {
 	else
 		return sayi1; //return sayi2;
 }
-//Örnek-2:
-//Girilen iki tamsayı değerini kare fonskiyonuna gönderip fonksiyondan gelen değeri ekrana yazdıran fonskiyonu yazınız. 
+//Ã–rnek-2:
+//Girilen iki tamsayÄ± deÄŸerini kare fonskiyonuna gÃ¶nderip fonksiyondan gelen deÄŸeri ekrana yazdÄ±ran fonskiyonu yazÄ±nÄ±z. 
 void sayi() {
-	//Değer döndürmediği için void olarak tanımladık
-	//Değer almadığı için herhangi bir parametresi yok 
-	//() yani parantez içi boş 
+	//DeÄŸer dÃ¶ndÃ¼rmediÄŸi iÃ§in void olarak tanÄ±mladÄ±k
+	//DeÄŸer almadÄ±ÄŸÄ± iÃ§in herhangi bir parametresi yok 
+	//() yani parantez iÃ§i boÅŸ 
 	int s1, s2;
-	cout << "İki sayı girin:";
+	cout << "Ä°ki sayÄ± girin:";
 	cin >> s1 >> s2;
 	cout << kare(s1, s2) << endl;
 }
 
-//Örnek-3:
-//Kendisine gönderilen tamsayı değerinin faktöriyelini geri döndüren fonksiyonu yazınız. Eğer kendisine gönderilen sayı negatif ise 0 değerini döndürelim.
+//Ã–rnek-3:
+//Kendisine gÃ¶nderilen tamsayÄ± deÄŸerinin faktÃ¶riyelini geri dÃ¶ndÃ¼ren fonksiyonu yazÄ±nÄ±z. 
+//EÄŸer kendisine gÃ¶nderilen sayÄ± negatif ise 0 deÄŸerini dÃ¶ndÃ¼relim.
 //Not: 0!=1
 int faktoriyel(int sayi) {
-	//Eğer bir değer döndürmüyor olsaydı fonksiyonu; 
+	//EÄŸer bir deÄŸer dÃ¶ndÃ¼rmÃ¼yor olsaydÄ± fonksiyonu; 
 	//void faktoriyel(int sayi) 
-	//şeklinde tanımlardık
-	//Faktöriyel : Ör: 5!=1*2*3*4*5 veya 5!=5*4*3*2*1
+	//ÅŸeklinde tanÄ±mlardÄ±k
+	//FaktÃ¶riyel : Ã–r: 5!=1*2*3*4*5 veya 5!=5*4*3*2*1
 	int sonuc = 1;
 	for (int i = 1; i <= sayi; i++) {
 		sonuc *= i; //sonuc = sonuc * i;
 	}
 	/*
-	//1.yöntem:
+	//1.yÃ¶ntem:
 	if (sayi < 0)
 		return 0;
 	else
 		return sonuc;
 	*/
 
-	//2.yöntem:
+	//2.yÃ¶ntem:
 	if (sayi < 0)
 		sonuc = 0;
 	return sonuc;
 }
 
-//Örnek-4:
-//Kendisine gönderilen sayıyı faktöriyel fonksiyonuna gönderip faktöriyel fonksiyonundan gelen değer 0 ise "... sayısının faktöriyeli yoktur.", 0 değilse sayi!=sonuc Ör/5!=120 çıktısını versin
+//Ã–rnek-4:
+//Kendisine gÃ¶nderilen sayÄ±yÄ± faktÃ¶riyel fonksiyonuna gÃ¶nderip,
+//faktÃ¶riyel fonksiyonundan gelen deÄŸer 0 ise "... sayÄ±sÄ±nÄ±n faktÃ¶riyeli yoktur.", 
+//0 deÄŸilse sayi!=sonuc Ã–r/5!=120 Ã§Ä±ktÄ±sÄ±nÄ± versin
 void faktoriyel_yazdir(int sayi) {
 	int fakt = faktoriyel(sayi);
 	if (fakt == 0)
-		cout << sayi << " sayısının faktöriyeli yoktur.\n";
+		cout << sayi << " sayÄ±sÄ±nÄ±n faktÃ¶riyeli yoktur.\n";
 	else
 		cout << sayi << "!=" << fakt << endl;
 }
 
-//Örnek-5:
-//Rastgele üretilen 1-100 arasında 5 sayının toplamını ekrana yazdıran fonksiyon
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-5:
+//Rastgele Ã¼retilen 1-100 arasÄ±nda 5 sayÄ±nÄ±n toplamÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 void rastgele5_toplam() {
 	int sayi, toplam = 0;
 	for (int i = 1; i <= 5; i++){
 		sayi = rand() % 100 + 1; 
-		//Başlangıç değeri = 1 (+1 ile ifade ettik)
-		//Bitiş değeri = 100 (100+1-1=100) İkisinin toplamından 1 değeriniş çıkararak hesaplarız
+		//BaÅŸlangÄ±Ã§ deÄŸeri = 1 (+1 ile ifade ettik)
+		//BitiÅŸ deÄŸeri = 100 (100+1-1=100) Ä°kisinin toplamÄ±ndan 1 deÄŸeriniÅŸ Ã§Ä±kararak hesaplarÄ±z
 
-		//Ör: 31 ile 54 arasında üretilecek deseydik: 
+		//Ã–r: 31 ile 54 arasÄ±nda Ã¼retilecek deseydik: 
 		//sayi = rand() % 24 + 31;
 		cout << sayi << endl;
 		toplam += sayi; //toplam = toplam + sayi;
@@ -115,19 +119,19 @@ void rastgele5_toplam() {
 
 }
 
-//Aşağıdaki Cuma günü derste çözeceğiz
+//AÅŸaÄŸÄ±daki Cuma gÃ¼nÃ¼ derste Ã§Ã¶zeceÄŸiz
 
-//Örnek-6:
-//Rastgele üretilen 20 sayıdan 1-100 arasındaki sayılardan tek olanları ve çift olanları ayrı ayrı ekrana yazdıran fonksiyon
-//Not: Değerler bir dizide tutulmak zorundadır
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-6:
+//Rastgele Ã¼retilen 20 sayÄ±dan 1-100 arasÄ±ndaki sayÄ±lardan tek olanlarÄ± ve Ã§ift olanlarÄ± ayrÄ± ayrÄ± ekrana yazdÄ±ran fonksiyon
+//Not: DeÄŸerler bir dizide tutulmak zorundadÄ±r
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 
 
 
-//Örnek-6:
-//Rastgele üretilen 5 sayının toplamını ekrana yazdıran fonksiyon
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-6:
+//Rastgele Ã¼retilen 5 sayÄ±nÄ±n toplamÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 
-//Cuma günü devam edeceğiz...
+//Cuma gÃ¼nÃ¼ devam edeceÄŸiz...
