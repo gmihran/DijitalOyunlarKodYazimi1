@@ -15,7 +15,8 @@ void rastgele5_toplam();
 int main()
 {
 	setlocale(LC_ALL, "turkish");
-	srand(time(NULL)); //Program her çalıştırıldığında Random ile üretilen değerlerin farklı değerler olmasını sağlar. Ama bu sayının farklılıklarını ifade etmez. Yani 5 üretildiyse tekrar üretilebilir.
+	srand(time(NULL)); //Program her çalıştırıldığında Random ile üretilen değerlerin farklı değerler olmasını sağlar. 
+	//Ama bu sayının farklılıklarını ifade etmez. Yani 5 üretildiyse tekrar üretilebilir.
 	//sayi();
 
 	cout << "faktoriyel() fonksiyonu çalışıyor...\n";
