@@ -50,7 +50,7 @@ int kare(int sayi1, int sayi2) {
 		return sayi1; //return sayi2;
 }
 //Örnek-2:
-//Girilen iki tamsayı değerini kare fonskiyonuna gönderip fonksiyondan gelen değeri ekrana yazdıran fonskiyonu yazınız. 
+//Girilen iki tamsayı değerini kare fonksiyonuna gönderip fonksiyondan gelen değeri ekrana yazdıran fonksiyonu yazınız. 
 void sayi() {
 	//Değer döndürmediği için void olarak tanımladık
 	//Değer almadığı için herhangi bir parametresi yok 
@@ -125,13 +125,6 @@ void rastgele5_toplam() {
 //Örnek-6:
 //Rastgele üretilen 20 sayıdan 1-100 arasındaki sayılardan tek olanları ve çift olanları ayrı ayrı ekrana yazdıran fonksiyon
 //Not: Değerler bir dizide tutulmak zorundadır
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
-
-
-
-//Örnek-6:
-//Rastgele üretilen 5 sayının toplamını ekrana yazdıran fonksiyon
 //Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
 //Geri döndürdüğü değer (Return değeri) : YOK (void)
 
