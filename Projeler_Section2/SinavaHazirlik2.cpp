@@ -26,35 +26,35 @@ int main()
 	cout << "Toplam:" << rastgele3(5, 20, 50) << endl;
 	t = rastgele3(3, 3, 5);
 	cout << "Toplam:" << t << endl;
-	cout << "Değer sıfır girilene kadar döngü devam ediyor...\n";
+	cout << "DeÄŸer sÄ±fÄ±r girilene kadar dÃ¶ngÃ¼ devam ediyor...\n";
 	maks();
-	cout << "Değer sıfır girilene kadar döngü devam ediyor...\n";
+	cout << "DeÄŸer sÄ±fÄ±r girilene kadar dÃ¶ngÃ¼ devam ediyor...\n";
 	farklar();
-	cout << "Kullanıcı adı: admin Parola: nimda" << endl;
-	cout << "Hatalı giriş sayısı:" << giris() << endl;
+	cout << "KullanÄ±cÄ± adÄ±: admin Parola: nimda" << endl;
+	cout << "HatalÄ± giriÅŸ sayÄ±sÄ±:" << giris() << endl;
 	if (giris2())
-		cout << "Giriş başarılı\n";
+		cout << "GiriÅŸ baÅŸarÄ±lÄ±\n";
 	else
-		cout << "Giriş başarısız\n";
+		cout << "GiriÅŸ baÅŸarÄ±sÄ±z\n";
 }
 
-//Örnek-6:
-//Rastgele üretilen 20 sayıdan 1-100 arasındaki sayılardan tek olanları ve çift olanları ayrı ayrı ekrana yazdıran fonksiyon
-//Not: Değerler bir dizide tutulmak zorundadır
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-6:
+//Rastgele Ã¼retilen 20 sayÄ±dan 1-100 arasÄ±ndaki sayÄ±lardan tek olanlarÄ± ve Ã§ift olanlarÄ± ayrÄ± ayrÄ± ekrana yazdÄ±ran fonksiyon
+//Not: DeÄŸerler bir dizide tutulmak zorundadÄ±r
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 void rastgele() {
 	int sayilar[20], i;
 	for (i = 0; i < 20; i++){
 		sayilar[i] = rand() % 100 + 1;
 	}
-	cout << "Tek sayılar\n";
+	cout << "Tek sayÄ±lar\n";
 	for (i = 0; i < 20; i++){
 		if (sayilar[i] % 2 == 1) {
 			cout << sayilar[i] << endl;
 		}
 	}
-	cout << "Çift sayılar\n";
+	cout << "Ã‡ift sayÄ±lar\n";
 	for (i = 0; i < 20; i++) {
 		if (sayilar[i] % 2 == 0) {
 			cout << sayilar[i] << endl;
@@ -62,39 +62,40 @@ void rastgele() {
 	}
 }
 
-//Örnek-7:
-//Rastgele üretilen  1-100 arasındaki 20 sayıdan tek olanları ve çift olanları ayrı ayrı ve alt alta ekrana yazdıran,
-//tek ve çift sayıların toplamlarını ekrana yazdıran fonksiyon
-//Not: Değerler bir dizide tutulmak zorundadır
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-7:
+//Rastgele Ã¼retilen  1-100 arasÄ±ndaki 20 sayÄ±dan tek olanlarÄ± ve Ã§ift olanlarÄ± ayrÄ± ayrÄ± ve alt alta ekrana yazdÄ±ran,
+//tek ve Ã§ift sayÄ±larÄ±n toplamlarÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Not: DeÄŸerler bir dizide tutulmak zorundadÄ±r
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 void rastgele2() {
 	int sayilar[20], i, tektoplam=0, cifttoplam=0;
 	for (i = 0; i < 20; i++) {
 		sayilar[i] = rand() % 100 + 1;
 	}
-	cout << "Tek sayılar\n";
+	cout << "Tek sayÄ±lar\n";
 	for (i = 0; i < 20; i++) {
 		if (sayilar[i] % 2 == 1) {
 			cout << sayilar[i] << endl;
 			tektoplam += sayilar[i]; //tektoplam = tektoplam + sayilar[i];
 		}
 	}
-	cout << "Tek sayıların toplamı:" << tektoplam << endl;
-	cout << "Çift sayılar\n";
+	cout << "Tek sayÄ±larÄ±n toplamÄ±:" << tektoplam << endl;
+	cout << "Ã‡ift sayÄ±lar\n";
 	for (i = 0; i < 20; i++) {
 		if (sayilar[i] % 2 == 0) {
 			cout << sayilar[i] << endl;
 			cifttoplam += sayilar[i];
 		}
 	}
-	cout << "Çift sayıların toplamı:" << cifttoplam << endl;
+	cout << "Ã‡ift sayÄ±larÄ±n toplamÄ±:" << cifttoplam << endl;
 }
 
-//Örnek-8:
-//Fonksiyona gelen sayı kadar, fonksiyona gelen sayı aralığında değer üreten ve bu sayıları alt alta ekrana yazdırıp, sayıların toplamını geri döndüren fonksiyon
-//Parametre (Bu fonksiyona gönderilen değer) : int miktar, int baslangic, int bitis
-//Geri döndürdüğü değer (Return değeri) : int (toplam)
+//Ã–rnek-8:
+//Fonksiyona gelen sayÄ± kadar, fonksiyona gelen sayÄ± aralÄ±ÄŸÄ±nda deÄŸer Ã¼reten ve bu sayÄ±larÄ± alt alta ekrana yazdÄ±rÄ±p, 
+//sayÄ±larÄ±n toplamÄ±nÄ± geri dÃ¶ndÃ¼ren fonksiyon
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : int miktar, int baslangic, int bitis
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : int (toplam)
 int rastgele3(int miktar, int baslangic, int bitis) {
 	int sayi, toplam = 0;
 	for (int i = 1; i <= miktar; i++){
@@ -105,80 +106,85 @@ int rastgele3(int miktar, int baslangic, int bitis) {
 	return toplam;
 }
 
-//Örnek-9:Kullanıcı 0 sayısını girene kadar (sayı 0 olmadığı sürece) sayı girmesini sağlayıp, bu sayıların en büyüğünü (sıfır sayısını dahil etmeden büyük sayı bulunmalıdır) ekrana yazdıran fonksiyon
+//Ã–rnek-9:KullanÄ±cÄ± 0 sayÄ±sÄ±nÄ± girene kadar (sayÄ± 0 olmadÄ±ÄŸÄ± sÃ¼rece) sayÄ± girmesini saÄŸlayÄ±p, 
+//bu sayÄ±larÄ±n en bÃ¼yÃ¼ÄŸÃ¼nÃ¼ (sÄ±fÄ±r sayÄ±sÄ±nÄ± dahil etmeden bÃ¼yÃ¼k sayÄ± bulunmalÄ±dÄ±r) ekrana yazdÄ±ran fonksiyon
 void maks() {
 	int sayi, mak = INT_MIN;
-	//mak değeri karşılaştırırken (sayi > mak) ilk değerine ihtiyacımız var. 
+	//mak deÄŸeri karÅŸÄ±laÅŸtÄ±rÄ±rken (sayi > mak) ilk deÄŸerine ihtiyacÄ±mÄ±z var. 
 	do
 	{
-		cout << "Sayı:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		if (sayi > mak && sayi!=0)
 			mak = sayi;
 	} while (sayi!=0);
-	cout << "Maksimum değer:" << mak << endl;
+	cout << "Maksimum deÄŸer:" << mak << endl;
 }
 
-//Örnek-10:Kullanıcı 0 sayısını girene kadar sayı girmesini sağlayıp, bu sayıların farklarını ekrana yazdıran fonksiyon
-//Ör: 3 4 girdiğinde Çıktı:-1, 6 girdiğinde Çıktı:-2, 0 girdiğinde Çıktı:6 program sonlanır.
+//Ã–rnek-10:KullanÄ±cÄ± 0 sayÄ±sÄ±nÄ± girene kadar sayÄ± girmesini saÄŸlayÄ±p, bu sayÄ±larÄ±n farklarÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Ã–r: 3 4 girdiÄŸinde Ã‡Ä±ktÄ±:-1, 6 girdiÄŸinde Ã‡Ä±ktÄ±:-2, 0 girdiÄŸinde Ã‡Ä±ktÄ±:6 program sonlanÄ±r.
 void farklar() {
 	int sayi, ilksayi;
-	cout << "İlk sayı:";
+	cout << "Ä°lk sayÄ±:";
 	cin >> ilksayi;
 	do
 	{
-		cout << "Sayı:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		cout << "Fark:" << ilksayi - sayi << endl;
 		ilksayi = sayi;
-		cout << "İlk sayı:" << ilksayi << endl;
+		cout << "Ä°lk sayÄ±:" << ilksayi << endl;
 	} while (sayi!=0);
 }
 
 
-//Örnek-11:Kullanıcı adı ve parola girişi doğru olana kadar (her iki bilgi de doğru olmadığı sürece) kontrol edip, kullanıcı adı ve parola bilgisinin kaç kere yanlış girildiğini geri döndüren fonksiyon
+//Ã–rnek-11:KullanÄ±cÄ± adÄ± ve parola giriÅŸi doÄŸru olana kadar (her iki bilgi de doÄŸru olmadÄ±ÄŸÄ± sÃ¼rece) kontrol edip, 
+//kullanÄ±cÄ± adÄ± ve parola bilgisinin kaÃ§ kere yanlÄ±ÅŸ girildiÄŸini geri dÃ¶ndÃ¼ren fonksiyon
 int giris() {
 	string k_adi, parola;
 	int miktar = 0;
 	do
 	{
-		cout << "Kullanıcı adı:";
+		cout << "KullanÄ±cÄ± adÄ±:";
 		cin >> k_adi;
 		cout << "Parola:";
 		cin >> parola;
 		if (k_adi == "admin" && parola == "nimda") {
-			//güvenli bir kontrol yapmıyoruz! Güvenli olması adına burada kullanıcı adı ve parola açık bir şekilde yazılmaması daha uygundur
-			cout << "Giriş başarılı\n";
+			//GÃ¼venli bir kontrol yapmÄ±yoruz! 
+			//GÃ¼venli olmasÄ± adÄ±na burada kullanÄ±cÄ± adÄ± ve parola aÃ§Ä±k bir ÅŸekilde yazÄ±lmamasÄ± daha uygundur.
+			cout << "GiriÅŸ baÅŸarÄ±lÄ±\n";
 			break;
 		}
 		else {
 			miktar++;
-			cout << "Hatalı giriş\n";
+			cout << "HatalÄ± giriÅŸ\n";
 		}
 			
 	} while (true);
 	return miktar;
 }
 
-//Örnek-12:Kullanıcıdan kullanıcı adı ve parola girişi alıp  kontrol edelim, 3 yanlış yapma hakkı olsun. Girişin başarılı bir şekilde olup olmadığını (bool değer) döndürsün ve kaç hakkı kaldığını ekrana yazdırsın
+//Ã–rnek-12:KullanÄ±cÄ±dan kullanÄ±cÄ± adÄ± ve parola giriÅŸi alÄ±p  kontrol edelim, 3 yanlÄ±ÅŸ yapma hakkÄ± olsun. 
+//GiriÅŸin baÅŸarÄ±lÄ± bir ÅŸekilde olup olmadÄ±ÄŸÄ±nÄ± (bool deÄŸer) dÃ¶ndÃ¼rsÃ¼n ve kaÃ§ hakkÄ± kaldÄ±ÄŸÄ±nÄ± ekrana yazdÄ±rsÄ±n
 bool giris2() {
 	string k_adi, parola;
 	int hak = 3;
 	bool kontrol = false;
 	do
 	{
-		cout << "Kullanıcı adı:";
+		cout << "KullanÄ±cÄ± adÄ±:";
 		cin >> k_adi;
 		cout << "Parola:";
 		cin >> parola;
 		if (k_adi == "admin" && parola == "nimda") {
-			//Güvenli bir kontrol yapmıyoruz! Güvenli olması adına burada kullanıcı adının ve parolanın açık bir şekilde yazılmaması daha uygundur
+			//GÃ¼venli bir kontrol yapmÄ±yoruz! 
+			//GÃ¼venli olmasÄ± adÄ±na burada kullanÄ±cÄ± adÄ±nÄ±n ve parolanÄ±n aÃ§Ä±k bir ÅŸekilde yazÄ±lmamasÄ± daha uygundur.
 			kontrol = true;
 			break;
 		}
 		else {
 			hak--;
-			cout << "Kalan hakkınız:" << hak << endl;
+			cout << "Kalan hakkÄ±nÄ±z:" << hak << endl;
 		}
 	} while (hak>0);
 	return kontrol;
