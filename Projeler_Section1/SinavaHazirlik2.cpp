@@ -39,7 +39,7 @@ int main()
 }
 
 //Örnek-6:
-//Rastgele üretilen 20 sayıdan 1-100 arasındaki sayılardan tek olanları ve çift olanları ayrı ayrı ekrana yazdıran fonksiyon
+//Rastgele üretilen 1-100 arasındaki 20 sayıdan tek olanları ve çift olanları ayrı ayrı ekrana yazdıran fonksiyon
 //Not: Değerler bir dizide tutulmak zorundadır
 //Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
 //Geri döndürdüğü değer (Return değeri) : YOK (void)
