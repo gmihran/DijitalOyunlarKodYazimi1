@@ -1,4 +1,4 @@
-# Dijital Oyunlar için Kod Yazimi I
+# Dijital Oyunlar için Kod Yazımı I
 2019-2020 Dijital Oyunlar için Kod Yazımı I Ders Notları ve Örnekleri
 
 Visual Studio 2017 İndirme Linki : https://visualstudio.microsoft.com/tr/vs/older-downloads/
